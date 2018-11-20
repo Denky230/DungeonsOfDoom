@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F0CF60621A48B3A0022DEEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF60521A48B3A0022DEEB /* AppDelegate.swift */; };
+		1F0CF60821A48B3A0022DEEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF60721A48B3A0022DEEB /* ViewController.swift */; };
+		1F0CF60B21A48B3A0022DEEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F0CF60921A48B3A0022DEEB /* Main.storyboard */; };
+		1F0CF60D21A48B3C0022DEEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F0CF60C21A48B3C0022DEEB /* Assets.xcassets */; };
+		1F0CF61021A48B3C0022DEEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F0CF60E21A48B3C0022DEEB /* LaunchScreen.storyboard */; };
+		1F0CF61B21A48B3C0022DEEB /* DungeonsOfDoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF61A21A48B3C0022DEEB /* DungeonsOfDoomTests.swift */; };
+		1F0CF62621A48B3C0022DEEB /* DungeonsOfDoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF62521A48B3C0022DEEB /* DungeonsOfDoomUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F0CF61721A48B3C0022DEEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F0CF5FA21A48B3A0022DEEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F0CF60121A48B3A0022DEEB;
+			remoteInfo = DungeonsOfDoom;
+		};
+		1F0CF62221A48B3C0022DEEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F0CF5FA21A48B3A0022DEEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F0CF60121A48B3A0022DEEB;
+			remoteInfo = DungeonsOfDoom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F0CF60221A48B3A0022DEEB /* DungeonsOfDoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsOfDoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F0CF60521A48B3A0022DEEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F0CF60721A48B3A0022DEEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F0CF60A21A48B3A0022DEEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F0CF60C21A48B3C0022DEEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F0CF60F21A48B3C0022DEEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F0CF61121A48B3C0022DEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F0CF61621A48B3C0022DEEB /* DungeonsOfDoomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DungeonsOfDoomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F0CF61A21A48B3C0022DEEB /* DungeonsOfDoomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonsOfDoomTests.swift; sourceTree = "<group>"; };
+		1F0CF61C21A48B3C0022DEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F0CF62121A48B3C0022DEEB /* DungeonsOfDoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DungeonsOfDoomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F0CF62521A48B3C0022DEEB /* DungeonsOfDoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonsOfDoomUITests.swift; sourceTree = "<group>"; };
+		1F0CF62721A48B3C0022DEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F0CF5FF21A48B3A0022DEEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F0CF61321A48B3C0022DEEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F0CF61E21A48B3C0022DEEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F0CF5F921A48B3A0022DEEB = {
+			isa = PBXGroup;
+			children = (
+				1F0CF60421A48B3A0022DEEB /* DungeonsOfDoom */,
+				1F0CF61921A48B3C0022DEEB /* DungeonsOfDoomTests */,
+				1F0CF62421A48B3C0022DEEB /* DungeonsOfDoomUITests */,
+				1F0CF60321A48B3A0022DEEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F0CF60321A48B3A0022DEEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F0CF60221A48B3A0022DEEB /* DungeonsOfDoom.app */,
+				1F0CF61621A48B3C0022DEEB /* DungeonsOfDoomTests.xctest */,
+				1F0CF62121A48B3C0022DEEB /* DungeonsOfDoomUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F0CF60421A48B3A0022DEEB /* DungeonsOfDoom */ = {
+			isa = PBXGroup;
+			children = (
+				1F0CF60521A48B3A0022DEEB /* AppDelegate.swift */,
+				1F0CF60721A48B3A0022DEEB /* ViewController.swift */,
+				1F0CF60921A48B3A0022DEEB /* Main.storyboard */,
+				1F0CF60C21A48B3C0022DEEB /* Assets.xcassets */,
+				1F0CF60E21A48B3C0022DEEB /* LaunchScreen.storyboard */,
+				1F0CF61121A48B3C0022DEEB /* Info.plist */,
+			);
+			path = DungeonsOfDoom;
+			sourceTree = "<group>";
+		};
+		1F0CF61921A48B3C0022DEEB /* DungeonsOfDoomTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F0CF61A21A48B3C0022DEEB /* DungeonsOfDoomTests.swift */,
+				1F0CF61C21A48B3C0022DEEB /* Info.plist */,
+			);
+			path = DungeonsOfDoomTests;
+			sourceTree = "<group>";
+		};
+		1F0CF62421A48B3C0022DEEB /* DungeonsOfDoomUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1F0CF62521A48B3C0022DEEB /* DungeonsOfDoomUITests.swift */,
+				1F0CF62721A48B3C0022DEEB /* Info.plist */,
+			);
+			path = DungeonsOfDoomUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F0CF60121A48B3A0022DEEB /* DungeonsOfDoom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F0CF62A21A48B3C0022DEEB /* Build configuration list for PBXNativeTarget "DungeonsOfDoom" */;
+			buildPhases = (
+				1F0CF5FE21A48B3A0022DEEB /* Sources */,
+				1F0CF5FF21A48B3A0022DEEB /* Frameworks */,
+				1F0CF60021A48B3A0022DEEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DungeonsOfDoom;
+			productName = DungeonsOfDoom;
+			productReference = 1F0CF60221A48B3A0022DEEB /* DungeonsOfDoom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F0CF61521A48B3C0022DEEB /* DungeonsOfDoomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F0CF62D21A48B3C0022DEEB /* Build configuration list for PBXNativeTarget "DungeonsOfDoomTests" */;
+			buildPhases = (
+				1F0CF61221A48B3C0022DEEB /* Sources */,
+				1F0CF61321A48B3C0022DEEB /* Frameworks */,
+				1F0CF61421A48B3C0022DEEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F0CF61821A48B3C0022DEEB /* PBXTargetDependency */,
+			);
+			name = DungeonsOfDoomTests;
+			productName = DungeonsOfDoomTests;
+			productReference = 1F0CF61621A48B3C0022DEEB /* DungeonsOfDoomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1F0CF62021A48B3C0022DEEB /* DungeonsOfDoomUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F0CF63021A48B3C0022DEEB /* Build configuration list for PBXNativeTarget "DungeonsOfDoomUITests" */;
+			buildPhases = (
+				1F0CF61D21A48B3C0022DEEB /* Sources */,
+				1F0CF61E21A48B3C0022DEEB /* Frameworks */,
+				1F0CF61F21A48B3C0022DEEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F0CF62321A48B3C0022DEEB /* PBXTargetDependency */,
+			);
+			name = DungeonsOfDoomUITests;
+			productName = DungeonsOfDoomUITests;
+			productReference = 1F0CF62121A48B3C0022DEEB /* DungeonsOfDoomUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F0CF5FA21A48B3A0022DEEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Oscar Rossello";
+				TargetAttributes = {
+					1F0CF60121A48B3A0022DEEB = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					1F0CF61521A48B3C0022DEEB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1F0CF60121A48B3A0022DEEB;
+					};
+					1F0CF62021A48B3C0022DEEB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1F0CF60121A48B3A0022DEEB;
+					};
+				};
+			};
+			buildConfigurationList = 1F0CF5FD21A48B3A0022DEEB /* Build configuration list for PBXProject "DungeonsOfDoom" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F0CF5F921A48B3A0022DEEB;
+			productRefGroup = 1F0CF60321A48B3A0022DEEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F0CF60121A48B3A0022DEEB /* DungeonsOfDoom */,
+				1F0CF61521A48B3C0022DEEB /* DungeonsOfDoomTests */,
+				1F0CF62021A48B3C0022DEEB /* DungeonsOfDoomUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F0CF60021A48B3A0022DEEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F0CF61021A48B3C0022DEEB /* LaunchScreen.storyboard in Resources */,
+				1F0CF60D21A48B3C0022DEEB /* Assets.xcassets in Resources */,
+				1F0CF60B21A48B3A0022DEEB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F0CF61421A48B3C0022DEEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F0CF61F21A48B3C0022DEEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F0CF5FE21A48B3A0022DEEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F0CF60821A48B3A0022DEEB /* ViewController.swift in Sources */,
+				1F0CF60621A48B3A0022DEEB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F0CF61221A48B3C0022DEEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F0CF61B21A48B3C0022DEEB /* DungeonsOfDoomTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F0CF61D21A48B3C0022DEEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F0CF62621A48B3C0022DEEB /* DungeonsOfDoomUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F0CF61821A48B3C0022DEEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F0CF60121A48B3A0022DEEB /* DungeonsOfDoom */;
+			targetProxy = 1F0CF61721A48B3C0022DEEB /* PBXContainerItemProxy */;
+		};
+		1F0CF62321A48B3C0022DEEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F0CF60121A48B3A0022DEEB /* DungeonsOfDoom */;
+			targetProxy = 1F0CF62221A48B3C0022DEEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F0CF60921A48B3A0022DEEB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F0CF60A21A48B3A0022DEEB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F0CF60E21A48B3C0022DEEB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F0CF60F21A48B3C0022DEEB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F0CF62821A48B3C0022DEEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1F0CF62921A48B3C0022DEEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F0CF62B21A48B3C0022DEEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DungeonsOfDoom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dnky.DungeonsOfDoom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F0CF62C21A48B3C0022DEEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DungeonsOfDoom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dnky.DungeonsOfDoom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1F0CF62E21A48B3C0022DEEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DungeonsOfDoomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dnky.DungeonsOfDoomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DungeonsOfDoom.app/DungeonsOfDoom";
+			};
+			name = Debug;
+		};
+		1F0CF62F21A48B3C0022DEEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DungeonsOfDoomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dnky.DungeonsOfDoomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DungeonsOfDoom.app/DungeonsOfDoom";
+			};
+			name = Release;
+		};
+		1F0CF63121A48B3C0022DEEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DungeonsOfDoomUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dnky.DungeonsOfDoomUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DungeonsOfDoom;
+			};
+			name = Debug;
+		};
+		1F0CF63221A48B3C0022DEEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DungeonsOfDoomUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dnky.DungeonsOfDoomUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DungeonsOfDoom;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F0CF5FD21A48B3A0022DEEB /* Build configuration list for PBXProject "DungeonsOfDoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F0CF62821A48B3C0022DEEB /* Debug */,
+				1F0CF62921A48B3C0022DEEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F0CF62A21A48B3C0022DEEB /* Build configuration list for PBXNativeTarget "DungeonsOfDoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F0CF62B21A48B3C0022DEEB /* Debug */,
+				1F0CF62C21A48B3C0022DEEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F0CF62D21A48B3C0022DEEB /* Build configuration list for PBXNativeTarget "DungeonsOfDoomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F0CF62E21A48B3C0022DEEB /* Debug */,
+				1F0CF62F21A48B3C0022DEEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F0CF63021A48B3C0022DEEB /* Build configuration list for PBXNativeTarget "DungeonsOfDoomUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F0CF63121A48B3C0022DEEB /* Debug */,
+				1F0CF63221A48B3C0022DEEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F0CF5FA21A48B3A0022DEEB /* Project object */;
+}
