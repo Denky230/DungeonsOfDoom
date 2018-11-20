@@ -15,6 +15,8 @@
 		1F0CF61B21A48B3C0022DEEB /* DungeonsOfDoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF61A21A48B3C0022DEEB /* DungeonsOfDoomTests.swift */; };
 		1F0CF62621A48B3C0022DEEB /* DungeonsOfDoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF62521A48B3C0022DEEB /* DungeonsOfDoomUITests.swift */; };
 		1F0CF63721A48E480022DEEB /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF63621A48E480022DEEB /* Hero.swift */; };
+		1F0CF63921A491CB0022DEEB /* Estuf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF63821A491CB0022DEEB /* Estuf.swift */; };
+		1F0CF63C21A493FE0022DEEB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF63B21A493FE0022DEEB /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		1F0CF62521A48B3C0022DEEB /* DungeonsOfDoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonsOfDoomUITests.swift; sourceTree = "<group>"; };
 		1F0CF62721A48B3C0022DEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F0CF63621A48E480022DEEB /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		1F0CF63821A491CB0022DEEB /* Estuf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Estuf.swift; path = ../../../../../Documents/Estuf.swift; sourceTree = "<group>"; };
+		1F0CF63B21A493FE0022DEEB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../../../../../Documents/Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 				1F0CF60C21A48B3C0022DEEB /* Assets.xcassets */,
 				1F0CF61121A48B3C0022DEEB /* Info.plist */,
 				1F0CF63521A48E330022DEEB /* Model */,
+				1F0CF63A21A4928B0022DEEB /* Managers */,
 				1F0CF63321A48DA40022DEEB /* Storyboards */,
 				1F0CF63421A48E1A0022DEEB /* ViewControllers */,
 			);
@@ -148,8 +153,17 @@
 			isa = PBXGroup;
 			children = (
 				1F0CF63621A48E480022DEEB /* Hero.swift */,
+				1F0CF63821A491CB0022DEEB /* Estuf.swift */,
+				1F0CF63B21A493FE0022DEEB /* Item.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1F0CF63A21A4928B0022DEEB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0CF63C21A493FE0022DEEB /* Item.swift in Sources */,
 				1F0CF60821A48B3A0022DEEB /* ViewController.swift in Sources */,
+				1F0CF63921A491CB0022DEEB /* Estuf.swift in Sources */,
 				1F0CF60621A48B3A0022DEEB /* AppDelegate.swift in Sources */,
 				1F0CF63721A48E480022DEEB /* Hero.swift in Sources */,
 			);
