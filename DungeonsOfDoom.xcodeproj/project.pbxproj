@@ -17,6 +17,15 @@
 		1F0CF63721A48E480022DEEB /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF63621A48E480022DEEB /* Hero.swift */; };
 		1F0CF63921A491CB0022DEEB /* Estuf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF63821A491CB0022DEEB /* Estuf.swift */; };
 		1F0CF63C21A493FE0022DEEB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF63B21A493FE0022DEEB /* Item.swift */; };
+		1F0CF6D421A5A0330024DD67 /* ItemSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6D321A5A0330024DD67 /* ItemSlot.swift */; };
+		1F0CF6D621A5A08A0024DD67 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6D521A5A08A0024DD67 /* Stat.swift */; };
+		1F0CF6D921A5A5880024DD67 /* DescriptivePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6D821A5A5880024DD67 /* DescriptivePickerView.swift */; };
+		1F0CF6DB21A5A74F0024DD67 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6DA21A5A74F0024DD67 /* Monster.swift */; };
+		1F0CF6DD21A5A7E70024DD67 /* Attack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6DC21A5A7E70024DD67 /* Attack.swift */; };
+		1F0CF6E021A5A95C0024DD67 /* Defense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6DF21A5A95C0024DD67 /* Defense.swift */; };
+		1F0CF6E221A5A9820024DD67 /* Magic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6E121A5A9820024DD67 /* Magic.swift */; };
+		1F0CF6E421A5A9960024DD67 /* Luck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6E321A5A9960024DD67 /* Luck.swift */; };
+		1F0CF6E621A5AA290024DD67 /* HeroClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6E521A5AA290024DD67 /* HeroClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,15 @@
 		1F0CF63621A48E480022DEEB /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		1F0CF63821A491CB0022DEEB /* Estuf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Estuf.swift; path = ../../../../../Documents/Estuf.swift; sourceTree = "<group>"; };
 		1F0CF63B21A493FE0022DEEB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../../../../../Documents/Item.swift; sourceTree = "<group>"; };
+		1F0CF6D321A5A0330024DD67 /* ItemSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSlot.swift; sourceTree = "<group>"; };
+		1F0CF6D521A5A08A0024DD67 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
+		1F0CF6D821A5A5880024DD67 /* DescriptivePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptivePickerView.swift; sourceTree = "<group>"; };
+		1F0CF6DA21A5A74F0024DD67 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		1F0CF6DC21A5A7E70024DD67 /* Attack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attack.swift; sourceTree = "<group>"; };
+		1F0CF6DF21A5A95C0024DD67 /* Defense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defense.swift; sourceTree = "<group>"; };
+		1F0CF6E121A5A9820024DD67 /* Magic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic.swift; sourceTree = "<group>"; };
+		1F0CF6E321A5A9960024DD67 /* Luck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Luck.swift; sourceTree = "<group>"; };
+		1F0CF6E521A5AA290024DD67 /* HeroClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +124,7 @@
 				1F0CF60521A48B3A0022DEEB /* AppDelegate.swift */,
 				1F0CF60C21A48B3C0022DEEB /* Assets.xcassets */,
 				1F0CF61121A48B3C0022DEEB /* Info.plist */,
+				1F0CF6D721A5A4FD0024DD67 /* AppClasses */,
 				1F0CF63521A48E330022DEEB /* Model */,
 				1F0CF63A21A4928B0022DEEB /* Managers */,
 				1F0CF63321A48DA40022DEEB /* Storyboards */,
@@ -153,8 +172,12 @@
 			isa = PBXGroup;
 			children = (
 				1F0CF63621A48E480022DEEB /* Hero.swift */,
+				1F0CF6E521A5AA290024DD67 /* HeroClass.swift */,
 				1F0CF63821A491CB0022DEEB /* Estuf.swift */,
 				1F0CF63B21A493FE0022DEEB /* Item.swift */,
+				1F0CF6D321A5A0330024DD67 /* ItemSlot.swift */,
+				1F0CF6DA21A5A74F0024DD67 /* Monster.swift */,
+				1F0CF6DE21A5A93D0024DD67 /* Stats */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +187,26 @@
 			children = (
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		1F0CF6D721A5A4FD0024DD67 /* AppClasses */ = {
+			isa = PBXGroup;
+			children = (
+				1F0CF6D821A5A5880024DD67 /* DescriptivePickerView.swift */,
+			);
+			path = AppClasses;
+			sourceTree = "<group>";
+		};
+		1F0CF6DE21A5A93D0024DD67 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				1F0CF6D521A5A08A0024DD67 /* Stat.swift */,
+				1F0CF6DC21A5A7E70024DD67 /* Attack.swift */,
+				1F0CF6DF21A5A95C0024DD67 /* Defense.swift */,
+				1F0CF6E121A5A9820024DD67 /* Magic.swift */,
+				1F0CF6E321A5A9960024DD67 /* Luck.swift */,
+			);
+			path = Stats;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,9 +340,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0CF6D421A5A0330024DD67 /* ItemSlot.swift in Sources */,
+				1F0CF6DB21A5A74F0024DD67 /* Monster.swift in Sources */,
+				1F0CF6D921A5A5880024DD67 /* DescriptivePickerView.swift in Sources */,
+				1F0CF6DD21A5A7E70024DD67 /* Attack.swift in Sources */,
 				1F0CF63C21A493FE0022DEEB /* Item.swift in Sources */,
+				1F0CF6E021A5A95C0024DD67 /* Defense.swift in Sources */,
+				1F0CF6E621A5AA290024DD67 /* HeroClass.swift in Sources */,
 				1F0CF60821A48B3A0022DEEB /* ViewController.swift in Sources */,
+				1F0CF6E421A5A9960024DD67 /* Luck.swift in Sources */,
+				1F0CF6E221A5A9820024DD67 /* Magic.swift in Sources */,
 				1F0CF63921A491CB0022DEEB /* Estuf.swift in Sources */,
+				1F0CF6D621A5A08A0024DD67 /* Stat.swift in Sources */,
 				1F0CF60621A48B3A0022DEEB /* AppDelegate.swift in Sources */,
 				1F0CF63721A48E480022DEEB /* Hero.swift in Sources */,
 			);

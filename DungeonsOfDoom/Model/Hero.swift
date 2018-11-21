@@ -12,15 +12,15 @@ import UIKit
 class Hero {
     
     private var name: String
-    private let image: UIImage
+    private let sprite: UIImage
     private var lifes: Int
-    private var exp: Int
     private var money: Int
+    private var exp: Int
     private let estuf: Estuf
     
-    init(name: String, image: UIImage, lifes: Int, exp: Int, money: Int, estuf: Estuf) {
+    init(name: String, sprite: UIImage, lifes: Int, exp: Int, money: Int, estuf: Estuf) {
         self.name = name
-        self.image = image
+        self.sprite = sprite
         self.lifes = lifes
         self.exp = exp
         self.money = money
