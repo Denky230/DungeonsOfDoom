@@ -13,31 +13,42 @@ class Hero {
     
     private var name: String
     private let sprite: UIImage
+    private let heroClass: HeroClass
     private var lifes: Int
+    private let estuf: Estuf
     private var money: Int
     private var exp: Int
-    private let estuf: Estuf
     
-    init(name: String, sprite: UIImage, lifes: Int, exp: Int, money: Int, estuf: Estuf) {
+    init(name: String, sprite: UIImage, heroClass: HeroClass, lifes: Int, money: Int, estuf: Estuf) {
         self.name = name
         self.sprite = sprite
-        self.lifes = lifes
-        self.exp = exp
+        
+        self.heroClass = heroClass
+        self.lifes = heroClass.getInitLifes()
+        self.estuf = heroClass.getInitEstuf()
+        
         self.money = money
-        self.estuf = estuf
+        self.exp = 0
     }
     
-    public func getName() -> String { return name }
-    public func setName(newName: String) { self.name = newName }
-    
-    public func getLifes() -> Int { return lifes }
-    public func setLifes(newLifes: Int) { self.lifes = newLifes }
-    
-    public func getExp() -> Int { return exp }
-    public func setExp(newExp: Int) { self.exp = newExp }
-    
-    public func getMoney() -> Int { return money }
-    public func setMoney(newMoney: Int) { self.money = newMoney }
-    
-    public func getEstuf() -> Estuf { return estuf }
+    public func Attack() {
+        // TO DO: Attack logic
+    }
+    func getTotalStatFromItems(stat: Stat) -> Int {
+        var total: Int = 0
+        // Loop hero items
+        for item in estuf.getItems() {
+            // Loop item stats
+            for s in item.getStats() {
+                // Check for the right stat
+                let sName: String = String(describing: type(of: s))
+                let statName: String = String(describing: type(of: stat))
+                if statName.caseInsensitiveCompare(sName) == .orderedSame {
+                    total += stat.getValue()
+                }
+            }
+        }
+        
+        return total
+    }
 }

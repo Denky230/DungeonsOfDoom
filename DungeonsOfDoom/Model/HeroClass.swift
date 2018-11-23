@@ -10,11 +10,17 @@ import Foundation
 
 class HeroClass {
     
+    private let name: String
     private let initLifes: Int
     private let initEstuf: Estuf
     
-    init(initLifes: Int, initEstuf: Estuf) {
+    init(name: String, initLifes: Int, initEstuf: Estuf) {
+        self.name = name
         self.initLifes = initLifes
         self.initEstuf = initEstuf
     }
+    
+    public func getName() -> String { return self.name }
+    public func getInitLifes() -> Int { return self.initLifes }
+    public func getInitEstuf() -> Estuf { return self.initEstuf }
 }

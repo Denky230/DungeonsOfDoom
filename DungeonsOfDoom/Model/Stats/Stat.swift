@@ -13,4 +13,6 @@ class Stat {
     private var value: Int
     
     init(value: Int) { self.value = value }
+    
+    func getValue() -> Int { return self.value }    
 }

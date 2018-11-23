@@ -10,20 +10,23 @@ import UIKit
 
 class DescriptivePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
     
-//    init(frame: CGRect) {
-//        super.init(frame: frame)
-//    }
+    private var items: [String : String] = [String : String]()
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    // init()
+    public func initialize(items: [String : String]) { self.items = items }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 0
+        return items.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let view: UIView = UIView()
+        
+        return view
     }
 
     /*

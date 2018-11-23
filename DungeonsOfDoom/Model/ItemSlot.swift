@@ -11,4 +11,14 @@ import Foundation
 class ItemSlot {
     
     private var item: Item?
+    private var armorPiece: ArmorPiece
+    
+    init(armorPiece: ArmorPiece) {
+        self.armorPiece = armorPiece
+    }
+    
+    func getItem() -> Item { return self.item! }
+    func getArmorPiece() -> ArmorPiece { return self.armorPiece }
+    
+    func setItem(item: Item) { self.item = item }
 }

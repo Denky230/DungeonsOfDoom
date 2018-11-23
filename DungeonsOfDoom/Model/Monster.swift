@@ -21,7 +21,11 @@ class Monster {
         self.name = name
         self.sprite = sprite
         self.lifes = lifes
-        self.attack = Attack(value: attack)
+        self.attack = Stat(value: attack) as! Attack
         self.moneyDrop = moneyDrop
     }
+    
+//    public func Attack() {
+//        // TO DO: Attack logic
+//    }
 }
