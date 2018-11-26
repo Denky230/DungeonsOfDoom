@@ -16,15 +16,15 @@
 		1F0CF62621A48B3C0022DEEB /* DungeonsOfDoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF62521A48B3C0022DEEB /* DungeonsOfDoomUITests.swift */; };
 		1F0CF63721A48E480022DEEB /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF63621A48E480022DEEB /* Hero.swift */; };
 		1F0CF6D421A5A0330024DD67 /* ItemSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6D321A5A0330024DD67 /* ItemSlot.swift */; };
-		1F0CF6D621A5A08A0024DD67 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6D521A5A08A0024DD67 /* Stat.swift */; };
 		1F0CF6D921A5A5880024DD67 /* DescriptivePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6D821A5A5880024DD67 /* DescriptivePickerView.swift */; };
 		1F0CF6DB21A5A74F0024DD67 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6DA21A5A74F0024DD67 /* Monster.swift */; };
-		1F0CF6DD21A5A7E70024DD67 /* Attack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6DC21A5A7E70024DD67 /* Attack.swift */; };
-		1F0CF6E021A5A95C0024DD67 /* Defense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6DF21A5A95C0024DD67 /* Defense.swift */; };
-		1F0CF6E221A5A9820024DD67 /* Magic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6E121A5A9820024DD67 /* Magic.swift */; };
-		1F0CF6E421A5A9960024DD67 /* Luck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6E321A5A9960024DD67 /* Luck.swift */; };
-		1F0CF6E621A5AA290024DD67 /* HeroClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6E521A5AA290024DD67 /* HeroClass.swift */; };
-		FA33211321A76B670048AB25 /* Estuf.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33211221A76B670048AB25 /* Estuf.swift */; };
+		1F5A29F421AC70540039CC87 /* StatsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A29F321AC70540039CC87 /* StatsTable.swift */; };
+		1F5A29F621AC710F0039CC87 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A29F521AC710F0039CC87 /* Stat.swift */; };
+		1F5A29F921AC73420039CC87 /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A29F821AC73420039CC87 /* Warrior.swift */; };
+		1F5A29FB21AC75FA0039CC87 /* ClassProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A29FA21AC75FA0039CC87 /* ClassProperties.swift */; };
+		1F5A29FD21AC7D290039CC87 /* Hunter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A29FC21AC7D290039CC87 /* Hunter.swift */; };
+		1F5A29FF21AC7D5D0039CC87 /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A29FE21AC7D5D0039CC87 /* Mage.swift */; };
+		FA33211321A76B670048AB25 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33211221A76B670048AB25 /* Equipment.swift */; };
 		FA33211521A76BC00048AB25 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33211421A76BC00048AB25 /* Item.swift */; };
 		FA33211821A772C60048AB25 /* ArmorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33211721A772C60048AB25 /* ArmorType.swift */; };
 		FA33211A21A773850048AB25 /* ArmorPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33211921A773850048AB25 /* ArmorPiece.swift */; };
@@ -63,15 +63,15 @@
 		1F0CF62721A48B3C0022DEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F0CF63621A48E480022DEEB /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		1F0CF6D321A5A0330024DD67 /* ItemSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSlot.swift; sourceTree = "<group>"; };
-		1F0CF6D521A5A08A0024DD67 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		1F0CF6D821A5A5880024DD67 /* DescriptivePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptivePickerView.swift; sourceTree = "<group>"; };
 		1F0CF6DA21A5A74F0024DD67 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
-		1F0CF6DC21A5A7E70024DD67 /* Attack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attack.swift; sourceTree = "<group>"; };
-		1F0CF6DF21A5A95C0024DD67 /* Defense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defense.swift; sourceTree = "<group>"; };
-		1F0CF6E121A5A9820024DD67 /* Magic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic.swift; sourceTree = "<group>"; };
-		1F0CF6E321A5A9960024DD67 /* Luck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Luck.swift; sourceTree = "<group>"; };
-		1F0CF6E521A5AA290024DD67 /* HeroClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroClass.swift; sourceTree = "<group>"; };
-		FA33211221A76B670048AB25 /* Estuf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estuf.swift; sourceTree = "<group>"; };
+		1F5A29F321AC70540039CC87 /* StatsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTable.swift; sourceTree = "<group>"; };
+		1F5A29F521AC710F0039CC87 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
+		1F5A29F821AC73420039CC87 /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
+		1F5A29FA21AC75FA0039CC87 /* ClassProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassProperties.swift; sourceTree = "<group>"; };
+		1F5A29FC21AC7D290039CC87 /* Hunter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hunter.swift; sourceTree = "<group>"; };
+		1F5A29FE21AC7D5D0039CC87 /* Mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
+		FA33211221A76B670048AB25 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		FA33211421A76BC00048AB25 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FA33211721A772C60048AB25 /* ArmorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmorType.swift; sourceTree = "<group>"; };
 		FA33211921A773850048AB25 /* ArmorPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmorPiece.swift; sourceTree = "<group>"; };
@@ -175,13 +175,12 @@
 		1F0CF63521A48E330022DEEB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1F0CF63621A48E480022DEEB /* Hero.swift */,
-				1F0CF6E521A5AA290024DD67 /* HeroClass.swift */,
-				FA33211221A76B670048AB25 /* Estuf.swift */,
+				1F5A29F721AC73190039CC87 /* Hero */,
+				FA33211221A76B670048AB25 /* Equipment.swift */,
 				1F0CF6D321A5A0330024DD67 /* ItemSlot.swift */,
 				FA33211421A76BC00048AB25 /* Item.swift */,
+				1F5A29F321AC70540039CC87 /* StatsTable.swift */,
 				1F0CF6DA21A5A74F0024DD67 /* Monster.swift */,
-				1F0CF6DE21A5A93D0024DD67 /* Stats */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,16 +193,15 @@
 			path = AppClasses;
 			sourceTree = "<group>";
 		};
-		1F0CF6DE21A5A93D0024DD67 /* Stats */ = {
+		1F5A29F721AC73190039CC87 /* Hero */ = {
 			isa = PBXGroup;
 			children = (
-				1F0CF6D521A5A08A0024DD67 /* Stat.swift */,
-				1F0CF6DC21A5A7E70024DD67 /* Attack.swift */,
-				1F0CF6DF21A5A95C0024DD67 /* Defense.swift */,
-				1F0CF6E121A5A9820024DD67 /* Magic.swift */,
-				1F0CF6E321A5A9960024DD67 /* Luck.swift */,
+				1F0CF63621A48E480022DEEB /* Hero.swift */,
+				1F5A29F821AC73420039CC87 /* Warrior.swift */,
+				1F5A29FC21AC7D290039CC87 /* Hunter.swift */,
+				1F5A29FE21AC7D5D0039CC87 /* Mage.swift */,
 			);
-			path = Stats;
+			path = Hero;
 			sourceTree = "<group>";
 		};
 		FA33211621A770A90048AB25 /* Constants */ = {
@@ -211,6 +209,8 @@
 			children = (
 				FA33211721A772C60048AB25 /* ArmorType.swift */,
 				FA33211921A773850048AB25 /* ArmorPiece.swift */,
+				1F5A29FA21AC75FA0039CC87 /* ClassProperties.swift */,
+				1F5A29F521AC710F0039CC87 /* Stat.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -346,22 +346,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA33211321A76B670048AB25 /* Estuf.swift in Sources */,
+				1F5A29F921AC73420039CC87 /* Warrior.swift in Sources */,
+				1F5A29F621AC710F0039CC87 /* Stat.swift in Sources */,
+				FA33211321A76B670048AB25 /* Equipment.swift in Sources */,
 				1F0CF6D421A5A0330024DD67 /* ItemSlot.swift in Sources */,
 				FA33211A21A773850048AB25 /* ArmorPiece.swift in Sources */,
 				1F0CF6DB21A5A74F0024DD67 /* Monster.swift in Sources */,
 				1F0CF6D921A5A5880024DD67 /* DescriptivePickerView.swift in Sources */,
 				FA33211521A76BC00048AB25 /* Item.swift in Sources */,
-				1F0CF6DD21A5A7E70024DD67 /* Attack.swift in Sources */,
 				FA33211821A772C60048AB25 /* ArmorType.swift in Sources */,
-				1F0CF6E021A5A95C0024DD67 /* Defense.swift in Sources */,
-				1F0CF6E621A5AA290024DD67 /* HeroClass.swift in Sources */,
 				1F0CF60821A48B3A0022DEEB /* ViewController.swift in Sources */,
-				1F0CF6E421A5A9960024DD67 /* Luck.swift in Sources */,
-				1F0CF6E221A5A9820024DD67 /* Magic.swift in Sources */,
-				1F0CF6D621A5A08A0024DD67 /* Stat.swift in Sources */,
 				1F0CF60621A48B3A0022DEEB /* AppDelegate.swift in Sources */,
+				1F5A29FB21AC75FA0039CC87 /* ClassProperties.swift in Sources */,
+				1F5A29FD21AC7D290039CC87 /* Hunter.swift in Sources */,
 				1F0CF63721A48E480022DEEB /* Hero.swift in Sources */,
+				1F5A29F421AC70540039CC87 /* StatsTable.swift in Sources */,
+				1F5A29FF21AC7D5D0039CC87 /* Mage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

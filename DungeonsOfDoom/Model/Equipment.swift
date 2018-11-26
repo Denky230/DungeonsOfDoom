@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Estuf {
+class Equipment {
     
     private let itemSlots: [ItemSlot]
     private let wearableArmorTypes: [ArmorType]

@@ -12,9 +12,9 @@ class HeroClass {
     
     private let name: String
     private let initLifes: Int
-    private let initEstuf: Estuf
+    private let initEstuf: Equipment
     
-    init(name: String, initLifes: Int, initEstuf: Estuf) {
+    init(name: String, initLifes: Int, initEstuf: Equipment) {
         self.name = name
         self.initLifes = initLifes
         self.initEstuf = initEstuf
@@ -22,5 +22,5 @@ class HeroClass {
     
     public func getName() -> String { return self.name }
     public func getInitLifes() -> Int { return self.initLifes }
-    public func getInitEstuf() -> Estuf { return self.initEstuf }
+    public func getInitEstuf() -> Equipment { return self.initEstuf }
 }

@@ -14,18 +14,18 @@ class Monster {
     private var name: String
     private let sprite: UIImage
     private var lifes: Int
-    private var attack: Attack
+    private var statsTable: StatsTable
     private let moneyDrop: Int
     
-    init(name: String, sprite: UIImage, lifes: Int, attack: Int, moneyDrop: Int) {
+    init(name: String, sprite: UIImage, lifes: Int, statsTable: StatsTable, moneyDrop: Int) {
         self.name = name
         self.sprite = sprite
         self.lifes = lifes
-        self.attack = Stat(value: attack) as! Attack
+        self.statsTable = statsTable
         self.moneyDrop = moneyDrop
     }
     
-//    public func Attack() {
-//        // TO DO: Attack logic
-//    }
+    public func Attack() {
+        // TO DO: Attack logic
+    }
 }

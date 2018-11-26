@@ -12,18 +12,18 @@ import UIKit
 class Item {
     
     private var sprite: UIImage
-    private var stats: [Stat]
+    private var statsTable: StatsTable
     private var armorPiece: ArmorPiece
     private var armorType: ArmorType
     
-    init(sprite: UIImage, stats: [Stat], armorPiece: ArmorPiece, armorType: ArmorType) {
+    init(sprite: UIImage, statsTable: StatsTable, armorPiece: ArmorPiece, armorType: ArmorType) {
         self.sprite = sprite
-        self.stats = stats
+        self.statsTable = statsTable
         self.armorPiece = armorPiece
         self.armorType = armorType
     }
     
-    func getStats() -> [Stat] { return self.stats }
+    func getStats() -> StatsTable { return self.statsTable }
     func getArmorPiece() -> ArmorPiece { return self.armorPiece }
     func getArmorType() -> ArmorType { return self.armorType }
 }
