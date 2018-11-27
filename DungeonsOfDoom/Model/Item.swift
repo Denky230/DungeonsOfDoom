@@ -23,6 +23,7 @@ class Item {
         self.armorType = armorType
     }
     
+    func getSprite() -> UIImage { return self.sprite }
     func getStats() -> StatsTable { return self.statsTable }
     func getArmorPiece() -> ArmorPiece { return self.armorPiece }
     func getArmorType() -> ArmorType { return self.armorType }
