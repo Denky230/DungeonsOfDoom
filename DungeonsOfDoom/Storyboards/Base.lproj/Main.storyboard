@@ -47,18 +47,9 @@
                     <view key="view" contentMode="scaleToFill" id="lHM-7r-kxO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4B7-fg-xvO">
-                                <rect key="frame" x="0.0" y="114" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="85P-Px-eOz"/>
                     </view>
-                    <connections>
-                        <outlet property="pickerView" destination="4B7-fg-xvO" id="n3g-Na-myL"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mMj-Oq-eyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

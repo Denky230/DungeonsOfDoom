@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F030C9C21AEDF8E00AE31C5 /* GameVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F030C9B21AEDF8E00AE31C5 /* GameVariables.swift */; };
+		1F030C9F21AEE21000AE31C5 /* HeroPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F030C9E21AEE21000AE31C5 /* HeroPanelView.swift */; };
 		1F0CF60621A48B3A0022DEEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF60521A48B3A0022DEEB /* AppDelegate.swift */; };
 		1F0CF60821A48B3A0022DEEB /* HeroSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF60721A48B3A0022DEEB /* HeroSelectionViewController.swift */; };
 		1F0CF60B21A48B3A0022DEEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F0CF60921A48B3A0022DEEB /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F030C9B21AEDF8E00AE31C5 /* GameVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVariables.swift; sourceTree = "<group>"; };
+		1F030C9E21AEE21000AE31C5 /* HeroPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroPanelView.swift; sourceTree = "<group>"; };
 		1F0CF60221A48B3A0022DEEB /* DungeonsOfDoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsOfDoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F0CF60521A48B3A0022DEEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F0CF60721A48B3A0022DEEB /* HeroSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSelectionViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				1F0CF6D821A5A5880024DD67 /* DescriptivePickerView.swift */,
+				1F030C9E21AEE21000AE31C5 /* HeroPanelView.swift */,
 			);
 			path = AppClasses;
 			sourceTree = "<group>";
@@ -225,10 +230,11 @@
 		FA33211621A770A90048AB25 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				1F5A29F521AC710F0039CC87 /* Stat.swift */,
 				FA33211721A772C60048AB25 /* ArmorType.swift */,
 				FA33211921A773850048AB25 /* ArmorPiece.swift */,
 				1F5A29FA21AC75FA0039CC87 /* ClassProperties.swift */,
-				1F5A29F521AC710F0039CC87 /* Stat.swift */,
+				1F030C9B21AEDF8E00AE31C5 /* GameVariables.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -369,10 +375,12 @@
 				1F5A29F621AC710F0039CC87 /* Stat.swift in Sources */,
 				FA33211321A76B670048AB25 /* Equipment.swift in Sources */,
 				1F0CF6D421A5A0330024DD67 /* ItemSlot.swift in Sources */,
+				1F030C9C21AEDF8E00AE31C5 /* GameVariables.swift in Sources */,
 				FA33211A21A773850048AB25 /* ArmorPiece.swift in Sources */,
 				1F0CF6DB21A5A74F0024DD67 /* Monster.swift in Sources */,
 				1F0CF6D921A5A5880024DD67 /* DescriptivePickerView.swift in Sources */,
 				1FDCB8FC21ADBD1100D22229 /* HeroInfoViewController.swift in Sources */,
+				1F030C9F21AEE21000AE31C5 /* HeroPanelView.swift in Sources */,
 				FA33211521A76BC00048AB25 /* Item.swift in Sources */,
 				1FDCB8FE21ADBE5000D22229 /* ShopViewController.swift in Sources */,
 				FA33211821A772C60048AB25 /* ArmorType.swift in Sources */,

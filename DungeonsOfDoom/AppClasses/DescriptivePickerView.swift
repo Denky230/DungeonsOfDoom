@@ -10,9 +10,18 @@ import UIKit
 
 class DescriptivePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    private var items: [Item] = [Item]()
+    var items: [Item] = [Item]() // TO DO: private
     
-    // init()
+    init(frame: CGRect, items: [Item]) {
+        super.init(frame: frame)
+        self.items = items
+        setData()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     public func initialize(items: [Item]) { self.items = items }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -28,6 +37,7 @@ class DescriptivePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDat
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
         // Each row's view
         let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         
@@ -50,6 +60,10 @@ class DescriptivePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDat
         return view
     }
 
+    func setData(){
+        self.pickerView(self, viewForRow: 0, forComponent: 0, reusing: nil)
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

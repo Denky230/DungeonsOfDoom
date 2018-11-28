@@ -11,42 +11,15 @@ import UIKit
 class ShopViewController: UIViewController {
     
     // PickerView
-    let shopPickerView: DescriptivePickerView = DescriptivePickerView()
-    @IBOutlet weak var pickerView: UIPickerView!
-    
-    let shopStartingItems: [Item] = [
-        Item(
-            sprite: UIImage(named: "dice20")!,
-            statsTable: StatsTable(stats: [
-                .attack : 10,
-                .defense : 2
-            ]),
-            armorPiece: .head,
-            armorType: .plate
-        ),
-        Item(
-            sprite: UIImage(named: "dice20")!,
-            statsTable: StatsTable(stats: [
-                .attack : 5,
-                .defense : 5
-            ]),
-            armorPiece: .chest,
-            armorType: .plate
-        )
-    ]
+    var shopPickerView: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        shopPickerView = DescriptivePickerView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), items: GameVariables.shopStartingItems)
         
-        initPickerView()
-    }
-    
-    func initPickerView() {
-        pickerView.delegate = shopPickerView
-        shopPickerView.initialize(items: shopStartingItems)
-        print(shopPickerView.numberOfRows(inComponent: 0))
+        self.view.addSubview(shopPickerView)
     }
     
     /*
@@ -58,8 +31,4 @@ class ShopViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-}
-
-extension UIPickerView {
-    
 }
