@@ -26,6 +26,9 @@
 		1F5A29FB21AC75FA0039CC87 /* ClassProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A29FA21AC75FA0039CC87 /* ClassProperties.swift */; };
 		1F5A29FD21AC7D290039CC87 /* Hunter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A29FC21AC7D290039CC87 /* Hunter.swift */; };
 		1F5A29FF21AC7D5D0039CC87 /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A29FE21AC7D5D0039CC87 /* Mage.swift */; };
+		1FD6A89321B6FC7B00CC1573 /* Describable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD6A89221B6FC7B00CC1573 /* Describable.swift */; };
+		1FD6A89521B7025100CC1573 /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD6A89421B7025100CC1573 /* ShopItem.swift */; };
+		1FD6A89721B7031C00CC1573 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD6A89621B7031C00CC1573 /* Shop.swift */; };
 		1FDCB8FA21ADBB2D00D22229 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCB8F921ADBB2D00D22229 /* GameManager.swift */; };
 		1FDCB8FC21ADBD1100D22229 /* HeroInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCB8FB21ADBD1100D22229 /* HeroInfoViewController.swift */; };
 		1FDCB8FE21ADBE5000D22229 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCB8FD21ADBE5000D22229 /* ShopViewController.swift */; };
@@ -78,6 +81,9 @@
 		1F5A29FA21AC75FA0039CC87 /* ClassProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassProperties.swift; sourceTree = "<group>"; };
 		1F5A29FC21AC7D290039CC87 /* Hunter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hunter.swift; sourceTree = "<group>"; };
 		1F5A29FE21AC7D5D0039CC87 /* Mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
+		1FD6A89221B6FC7B00CC1573 /* Describable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Describable.swift; sourceTree = "<group>"; };
+		1FD6A89421B7025100CC1573 /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
+		1FD6A89621B7031C00CC1573 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		1FDCB8F921ADBB2D00D22229 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		1FDCB8FB21ADBD1100D22229 /* HeroInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroInfoViewController.swift; sourceTree = "<group>"; };
 		1FDCB8FD21ADBE5000D22229 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
@@ -138,7 +144,8 @@
 				1F0CF60521A48B3A0022DEEB /* AppDelegate.swift */,
 				1F0CF60C21A48B3C0022DEEB /* Assets.xcassets */,
 				1F0CF61121A48B3C0022DEEB /* Info.plist */,
-				1F0CF6D721A5A4FD0024DD67 /* AppClasses */,
+				1FD6A89121B6FC6A00CC1573 /* Protocols */,
+				1F0CF6D721A5A4FD0024DD67 /* CustomClasses */,
 				FA33211621A770A90048AB25 /* Constants */,
 				1F0CF63521A48E330022DEEB /* Model */,
 				1FDCB8F821ADBAAA00D22229 /* Managers */,
@@ -194,17 +201,19 @@
 				FA33211421A76BC00048AB25 /* Item.swift */,
 				1F5A29F321AC70540039CC87 /* StatsTable.swift */,
 				1F0CF6DA21A5A74F0024DD67 /* Monster.swift */,
+				1FD6A89421B7025100CC1573 /* ShopItem.swift */,
+				1FD6A89621B7031C00CC1573 /* Shop.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		1F0CF6D721A5A4FD0024DD67 /* AppClasses */ = {
+		1F0CF6D721A5A4FD0024DD67 /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
 				1F0CF6D821A5A5880024DD67 /* DescriptivePickerView.swift */,
 				1F030C9E21AEE21000AE31C5 /* HeroPanelView.swift */,
 			);
-			path = AppClasses;
+			path = CustomClasses;
 			sourceTree = "<group>";
 		};
 		1F5A29F721AC73190039CC87 /* Hero */ = {
@@ -216,6 +225,14 @@
 				1F5A29FE21AC7D5D0039CC87 /* Mage.swift */,
 			);
 			path = Hero;
+			sourceTree = "<group>";
+		};
+		1FD6A89121B6FC6A00CC1573 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1FD6A89221B6FC7B00CC1573 /* Describable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		1FDCB8F821ADBAAA00D22229 /* Managers */ = {
@@ -372,6 +389,7 @@
 			files = (
 				1FDCB8FA21ADBB2D00D22229 /* GameManager.swift in Sources */,
 				1F5A29F921AC73420039CC87 /* Warrior.swift in Sources */,
+				1FD6A89521B7025100CC1573 /* ShopItem.swift in Sources */,
 				1F5A29F621AC710F0039CC87 /* Stat.swift in Sources */,
 				FA33211321A76B670048AB25 /* Equipment.swift in Sources */,
 				1F0CF6D421A5A0330024DD67 /* ItemSlot.swift in Sources */,
@@ -380,9 +398,11 @@
 				1F0CF6DB21A5A74F0024DD67 /* Monster.swift in Sources */,
 				1F0CF6D921A5A5880024DD67 /* DescriptivePickerView.swift in Sources */,
 				1FDCB8FC21ADBD1100D22229 /* HeroInfoViewController.swift in Sources */,
+				1FD6A89321B6FC7B00CC1573 /* Describable.swift in Sources */,
 				1F030C9F21AEE21000AE31C5 /* HeroPanelView.swift in Sources */,
 				FA33211521A76BC00048AB25 /* Item.swift in Sources */,
 				1FDCB8FE21ADBE5000D22229 /* ShopViewController.swift in Sources */,
+				1FD6A89721B7031C00CC1573 /* Shop.swift in Sources */,
 				FA33211821A772C60048AB25 /* ArmorType.swift in Sources */,
 				1F0CF60821A48B3A0022DEEB /* HeroSelectionViewController.swift in Sources */,
 				1F0CF60621A48B3A0022DEEB /* AppDelegate.swift in Sources */,

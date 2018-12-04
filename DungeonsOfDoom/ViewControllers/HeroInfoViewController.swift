@@ -14,7 +14,7 @@ class HeroInfoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        hero = Hunter(name: "Manolo Cabesabolo")
+        hero = Hunter(name: "RIP Mr.G")
     }
     
 
@@ -27,5 +27,4 @@ class HeroInfoViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

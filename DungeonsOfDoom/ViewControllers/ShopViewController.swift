@@ -17,9 +17,13 @@ class ShopViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        shopPickerView = DescriptivePickerView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), items: GameVariables.shopStartingItems)
+        initPickerView()
+    }
+    
+    func initPickerView() {
+        shopPickerView = DescriptivePickerView(items: GameVariables.shopStartingItems, frame: CGRect.zero)
         
-        self.view.addSubview(shopPickerView)
+        view.addSubview(shopPickerView)
     }
     
     /*

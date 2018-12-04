@@ -6,13 +6,13 @@
 //  Copyright © 2018 Oscar Rossello. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class Monster {
+class Monster : Describable {
+    
+    internal var sprite: UIImage
     
     private var name: String
-    private let sprite: UIImage
     private var lifes: Int
     private var statsTable: StatsTable
     private let moneyDrop: Int
@@ -28,4 +28,6 @@ class Monster {
     public func Attack() {
         // TO DO: Attack logic
     }
+    
+    func getDescription() {}
 }

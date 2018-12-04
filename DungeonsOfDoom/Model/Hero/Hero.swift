@@ -6,13 +6,13 @@
 //  Copyright © 2018 Oscar Rossello. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class Hero {
+class Hero : Describable {
+    
+    internal var sprite: UIImage
     
     private var name: String
-    private let sprite: UIImage
     private var lifes: Int
     private var money: Int
     private var experience: Int
@@ -42,4 +42,8 @@ class Hero {
         
         return total
     }
+    
+    func getMoney() -> Int { return self.money }
+    
+    func getDescription() {}
 }
