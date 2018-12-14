@@ -6,47 +6,43 @@
 //  Copyright © 2018 Oscar Rossello. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Equipment {
     
-    private let itemSlots: [ItemSlot]
+    private var itemSlots: [ArmorPiece : ItemSlot]
     private let wearableArmorTypes: [ArmorType]
     
     init(wearableArmorTypes: [ArmorType]) {
         self.wearableArmorTypes = wearableArmorTypes
         self.itemSlots = [
-            ItemSlot(armorPiece: .head),
-            ItemSlot(armorPiece: .shoulders),
-            ItemSlot(armorPiece: .chest),
-            ItemSlot(armorPiece: .gloves),
-            ItemSlot(armorPiece: .pants),
-            ItemSlot(armorPiece: .boots),
-            ItemSlot(armorPiece: .ring),
-            ItemSlot(armorPiece: .weapon),
+            .head : ItemSlot(),
+            .shoulders : ItemSlot(),
+            .chest : ItemSlot(),
+            .gloves : ItemSlot(),
+            .pants : ItemSlot(),
+            .boots : ItemSlot(),
+            .ring : ItemSlot(),
+            .weapon : ItemSlot(),
         ]
     }
     
     func getItems() -> [Item] {
         var items: [Item] = [Item]()
-        for itemSlot in itemSlots {
+        // Get Item in every ItemSlot
+        for itemSlot in itemSlots.values {
             items.append(itemSlot.getItem())
         }
         
         return items
     }
     
-    public func equipItem(item: Item) {
+    func equipItem(item: Item) {
         // Make sure item is the right armor type
         for armorType in wearableArmorTypes {
             if item.getArmorType() == armorType {
-                
                 // Equip item in the right slot
-                for itemSlot in itemSlots {
-                    if item.getArmorPiece() == itemSlot.getArmorPiece() {
-                        itemSlot.setItem(item: item)
-                    }
-                }
+                itemSlots[item.getArmorPiece()]!.setItem(item: item)
             }
         }
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Warrior : Hero {
+class Warrior: Hero {
     
     init(name: String) {
         super.init(name: name, sprite: ClassProperties.Warrior.sprite!, lifes: ClassProperties.Warrior.startingLifes, equipment: ClassProperties.Warrior.startingEquipment, baseStats: ClassProperties.Warrior.baseStats)

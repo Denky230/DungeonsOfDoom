@@ -10,13 +10,17 @@ import UIKit
 
 class HeroInfoViewController: UIViewController {
 
+    @IBAction func btnShop(_ sender: UIButton) {
+        let shopVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShopVC") as UIViewController
+        present(shopVC, animated: false, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        hero = Hunter(name: "RIP Mr.G")
+        currHero = Hunter(name: "RIP Mr.G")
     }
-    
 
     /*
     // MARK: - Navigation

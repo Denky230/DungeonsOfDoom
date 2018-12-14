@@ -10,8 +10,18 @@ import UIKit
 
 class ShopViewController: UIViewController {
     
+    @IBAction func btnBack(_ sender: UIButton) {
+        let heroInfoVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HeroInfoVC") as UIViewController
+        present(heroInfoVC, animated: false, completion: nil)
+    }
+    @IBAction func btnPurchase(_ sender: UIButton) {
+        let itemToBuy: ShopItem = Shop.getShopItem(index: shopPickerView.selectedRow(inComponent: 0))
+        Shop.buyItem(item: itemToBuy)
+    }
+    
     // PickerView
     var shopPickerView: UIPickerView!
+    @IBOutlet weak var storyPickerView: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,18 +31,13 @@ class ShopViewController: UIViewController {
     }
     
     func initPickerView() {
-        shopPickerView = DescriptivePickerView(items: GameVariables.shopStartingItems, frame: CGRect.zero)
+        let frame: CGRect = CGRect(
+            x: 0,
+            y: 0,
+            width: 10, height: 10
+        )
+        shopPickerView = DescriptivePickerView(items: Shop.getShopItems(), frame: storyPickerView.frame)
         
         view.addSubview(shopPickerView)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }

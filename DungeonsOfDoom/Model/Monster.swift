@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Monster : Describable {
+class Monster: Describable {
     
     internal var sprite: UIImage
     

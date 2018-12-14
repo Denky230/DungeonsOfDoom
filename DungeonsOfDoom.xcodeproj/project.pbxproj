@@ -20,6 +20,7 @@
 		1F0CF6D421A5A0330024DD67 /* ItemSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6D321A5A0330024DD67 /* ItemSlot.swift */; };
 		1F0CF6D921A5A5880024DD67 /* DescriptivePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6D821A5A5880024DD67 /* DescriptivePickerView.swift */; };
 		1F0CF6DB21A5A74F0024DD67 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CF6DA21A5A74F0024DD67 /* Monster.swift */; };
+		1F2BECEF21C1510500616E40 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BECEE21C1510500616E40 /* Tools.swift */; };
 		1F5A29F421AC70540039CC87 /* StatsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A29F321AC70540039CC87 /* StatsTable.swift */; };
 		1F5A29F621AC710F0039CC87 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A29F521AC710F0039CC87 /* Stat.swift */; };
 		1F5A29F921AC73420039CC87 /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A29F821AC73420039CC87 /* Warrior.swift */; };
@@ -75,6 +76,7 @@
 		1F0CF6D321A5A0330024DD67 /* ItemSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSlot.swift; sourceTree = "<group>"; };
 		1F0CF6D821A5A5880024DD67 /* DescriptivePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptivePickerView.swift; sourceTree = "<group>"; };
 		1F0CF6DA21A5A74F0024DD67 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		1F2BECEE21C1510500616E40 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		1F5A29F321AC70540039CC87 /* StatsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTable.swift; sourceTree = "<group>"; };
 		1F5A29F521AC710F0039CC87 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		1F5A29F821AC73420039CC87 /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
@@ -144,7 +146,9 @@
 				1F0CF60521A48B3A0022DEEB /* AppDelegate.swift */,
 				1F0CF60C21A48B3C0022DEEB /* Assets.xcassets */,
 				1F0CF61121A48B3C0022DEEB /* Info.plist */,
+				1F2BECED21C150E600616E40 /* Tools */,
 				1FD6A89121B6FC6A00CC1573 /* Protocols */,
+				1F2BECF021C1640400616E40 /* Delegates */,
 				1F0CF6D721A5A4FD0024DD67 /* CustomClasses */,
 				FA33211621A770A90048AB25 /* Constants */,
 				1F0CF63521A48E330022DEEB /* Model */,
@@ -214,6 +218,21 @@
 				1F030C9E21AEE21000AE31C5 /* HeroPanelView.swift */,
 			);
 			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		1F2BECED21C150E600616E40 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				1F2BECEE21C1510500616E40 /* Tools.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		1F2BECF021C1640400616E40 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		1F5A29F721AC73190039CC87 /* Hero */ = {
@@ -406,6 +425,7 @@
 				FA33211821A772C60048AB25 /* ArmorType.swift in Sources */,
 				1F0CF60821A48B3A0022DEEB /* HeroSelectionViewController.swift in Sources */,
 				1F0CF60621A48B3A0022DEEB /* AppDelegate.swift in Sources */,
+				1F2BECEF21C1510500616E40 /* Tools.swift in Sources */,
 				1F5A29FB21AC75FA0039CC87 /* ClassProperties.swift in Sources */,
 				1F5A29FD21AC7D290039CC87 /* Hunter.swift in Sources */,
 				1F0CF63721A48E480022DEEB /* Hero.swift in Sources */,

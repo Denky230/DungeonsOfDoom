@@ -6,11 +6,11 @@
 //  Copyright © 2018 Oscar Rossello. All rights reserved.
 //
 
-import Foundation
-
-var hero : Hero?
+var currHero : Hero?
 
 class GameManager {
     
-    
+    func initGame() {
+        
+    }
 }

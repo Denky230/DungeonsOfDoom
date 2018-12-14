@@ -32,7 +32,7 @@ class GameVariables {
             ]),
             armorPiece: .chest,
             armorType: .plate,
-            price: 20
+            price: 2000
         )
     ]
 }

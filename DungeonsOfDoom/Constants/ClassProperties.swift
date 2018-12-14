@@ -32,7 +32,7 @@ class ClassProperties {
     
     // HUNTER
     struct Hunter {
-        static let sprite = UIImage(named: "")
+        static let sprite = UIImage()
         static let startingLifes: Int = 3
         static let startingEquipment: Equipment =
             Equipment(wearableArmorTypes: [

@@ -27,7 +27,7 @@ class DescriptivePickerView: UIPickerView {
         }
         
         func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-            return 100
+            return 150
         }
         
         func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
@@ -36,7 +36,7 @@ class DescriptivePickerView: UIPickerView {
             let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
             
             // ImageView inside view
-            let imageView: UIImageView = UIImageView(frame: CGRect(x: -50, y: 0, width: 50, height: 50))
+            let imageView: UIImageView = UIImageView(frame: CGRect(x: -50, y: 25, width: 50, height: 50))
             // Add image to imageView + imageView to view
             imageView.image = items[row].sprite
             view.addSubview(imageView)

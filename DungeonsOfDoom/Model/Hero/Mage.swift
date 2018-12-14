@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Mage : Hero {
+class Mage: Hero {
 
     init(name: String) {
         super.init(name: name, sprite: ClassProperties.Mage.sprite!, lifes: ClassProperties.Mage.startingLifes, equipment: ClassProperties.Mage.startingEquipment, baseStats: ClassProperties.Mage.baseStats)
