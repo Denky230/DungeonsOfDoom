@@ -46,7 +46,13 @@ class HeroPanelView: UIView {
         return heroInfoView
     }()
     
+    var label: UILabel = {
+        let label = UILabel(frame: CGRect.zero)
+        label.text = "hi"
+        return label
+    }()
+    
     func setUpViews() {
-        self.addSubview(spriteView)
+        self.addSubview(label)
     }
 }

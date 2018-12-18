@@ -46,4 +46,7 @@ class Hero : Describable {
     func getMoney() -> Int { return self.money }
     
     func getDescription() {}
+    func getLifes() -> Int {
+        return self.lifes
+    }
 }

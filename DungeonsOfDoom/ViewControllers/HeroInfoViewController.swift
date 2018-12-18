@@ -31,5 +31,6 @@ class HeroInfoViewController: UIViewController {
     
     func initHeroInfoPanel() {
         heroInfoPanel = HeroPanelView(frame: storyView.frame, hero: currHero!)
+        view.addSubview(heroInfoPanel)
     }
 }

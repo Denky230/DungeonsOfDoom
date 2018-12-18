@@ -13,7 +13,7 @@ class ClassProperties {
     
     // WARRIOR
     struct Warrior {
-        static let sprite = UIImage(named: "")
+        static let sprite = UIImage(named: "warrior")
         static let startingLifes: Int = 5
         static let startingEquipment: Equipment =
             Equipment(wearableArmorTypes: [
@@ -32,7 +32,7 @@ class ClassProperties {
     
     // HUNTER
     struct Hunter {
-        static let sprite = UIImage()
+        static let sprite = UIImage(named: "hunter")
         static let startingLifes: Int = 3
         static let startingEquipment: Equipment =
             Equipment(wearableArmorTypes: [
@@ -50,7 +50,7 @@ class ClassProperties {
     
     // MAGE
     struct Mage {
-        static let sprite = UIImage(named: "")
+        static let sprite = UIImage(named: "mage")
         static let startingLifes: Int = 2
         static let startingEquipment: Equipment =
             Equipment(wearableArmorTypes: [
@@ -63,5 +63,22 @@ class ClassProperties {
                 .magic : 5,
                 .luck : 2
             ])
+    }
+    
+    // WARLOCK
+    struct Warlock {
+        static let sprite = UIImage(named: "warlock")
+        static let startingLifes: Int = 2
+        static let startingEquipment: Equipment =
+            Equipment(wearableArmorTypes: [
+                .cloth
+                ])
+        static let baseStats: StatsTable =
+            StatsTable(stats: [
+                .attack : 10,
+                .defense : 2,
+                .magic : 5,
+                .luck : 2
+                ])
     }
 }
