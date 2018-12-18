@@ -11,13 +11,13 @@ import UIKit
 class HeroInfoViewController: UIViewController {
 
     // Hero panel
-    var heroInfoPanel: HeroPanelView!
+    var heroInfoPanel: UIView!
     @IBOutlet weak var storyView: UIView!
     
     // Buttons
     @IBAction func btnShop(_ sender: UIButton) {
         let shopVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShopVC") as UIViewController
-        present(shopVC, animated: false, completion: nil)
+        present(shopVC, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -31,6 +31,7 @@ class HeroInfoViewController: UIViewController {
     
     func initHeroInfoPanel() {
         heroInfoPanel = HeroPanelView(frame: storyView.frame, hero: currHero!)
-        view.addSubview(heroInfoPanel)
+        heroInfoPanel.backgroundColor = UIColor.black
+        self.view.addSubview(heroInfoPanel)
     }
 }

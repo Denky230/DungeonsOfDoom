@@ -50,7 +50,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Shop"/>
                                 <connections>
-                                    <action selector="btnShop:" destination="jkU-Wy-Dbf" eventType="touchUpInside" id="Bdn-14-TGQ"/>
+                                    <action selector="btnShop:" destination="jkU-Wy-Dbf" eventType="touchUpInside" id="eKk-06-SaF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,7 +79,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <action selector="btnBack:" destination="pAV-dS-OBJ" eventType="touchUpInside" id="QIA-w0-bsm"/>
+                                    <action selector="btnBack:" destination="pAV-dS-OBJ" eventType="touchUpInside" id="TQP-29-Ch9"/>
                                 </connections>
                             </button>
                             <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JiZ-nn-dzw">

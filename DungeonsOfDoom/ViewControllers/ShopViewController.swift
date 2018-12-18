@@ -17,7 +17,7 @@ class ShopViewController: UIViewController {
     // Buttons
     @IBAction func btnBack(_ sender: UIButton) {
         let heroInfoVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HeroInfoVC") as UIViewController
-        present(heroInfoVC, animated: false, completion: nil)
+        present(heroInfoVC, animated: true, completion: nil)
     }
     @IBAction func btnPurchase(_ sender: UIButton) {
         let itemToBuy: ShopItem = Shop.getShopItem(index: shopPickerView.selectedRow(inComponent: 0))
