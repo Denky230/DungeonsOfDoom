@@ -10,6 +10,11 @@ import UIKit
 
 class HeroInfoViewController: UIViewController {
 
+    // Hero panel
+    var heroInfoPanel: HeroPanelView!
+    @IBOutlet weak var storyView: UIView!
+    
+    // Buttons
     @IBAction func btnShop(_ sender: UIButton) {
         let shopVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShopVC") as UIViewController
         present(shopVC, animated: false, completion: nil)
@@ -20,15 +25,11 @@ class HeroInfoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         currHero = Hunter(name: "RIP Mr.G")
+        
+        initHeroInfoPanel()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func initHeroInfoPanel() {
+        heroInfoPanel = HeroPanelView(frame: storyView.frame, hero: currHero!)
     }
-    */
 }

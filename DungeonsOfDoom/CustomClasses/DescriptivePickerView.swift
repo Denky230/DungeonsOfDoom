@@ -55,7 +55,7 @@ class DescriptivePickerView: UIPickerView {
     
     let controller: DescriptivePickerViewController
    
-    init(items: [Describable], frame: CGRect) {
+    init(frame: CGRect, items: [Describable]) {
         self.controller = DescriptivePickerViewController(items: items)
         super.init(frame: frame)
         

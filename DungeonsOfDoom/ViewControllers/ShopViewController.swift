@@ -10,6 +10,11 @@ import UIKit
 
 class ShopViewController: UIViewController {
     
+    // PickerView
+    var shopPickerView: DescriptivePickerView!
+    @IBOutlet weak var storyPickerView: UIPickerView!
+    
+    // Buttons
     @IBAction func btnBack(_ sender: UIButton) {
         let heroInfoVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HeroInfoVC") as UIViewController
         present(heroInfoVC, animated: false, completion: nil)
@@ -19,25 +24,16 @@ class ShopViewController: UIViewController {
         Shop.buyItem(item: itemToBuy)
     }
     
-    // PickerView
-    var shopPickerView: UIPickerView!
-    @IBOutlet weak var storyPickerView: UIPickerView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         initPickerView()
     }
     
     func initPickerView() {
-        let frame: CGRect = CGRect(
-            x: 0,
-            y: 0,
-            width: 10, height: 10
-        )
-        shopPickerView = DescriptivePickerView(items: Shop.getShopItems(), frame: storyPickerView.frame)
-        
+        // Initialize shopPickerView with storyboard pickerView's frame + Shop items
+        shopPickerView = DescriptivePickerView(frame: storyPickerView.frame, items: Shop.getShopItems())
         view.addSubview(shopPickerView)
     }
 }
