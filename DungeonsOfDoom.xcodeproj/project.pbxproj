@@ -148,7 +148,6 @@
 				1F0CF61121A48B3C0022DEEB /* Info.plist */,
 				1F2BECED21C150E600616E40 /* Tools */,
 				1FD6A89121B6FC6A00CC1573 /* Protocols */,
-				1F2BECF021C1640400616E40 /* Delegates */,
 				1F0CF6D721A5A4FD0024DD67 /* CustomClasses */,
 				FA33211621A770A90048AB25 /* Constants */,
 				1F0CF63521A48E330022DEEB /* Model */,
@@ -226,13 +225,6 @@
 				1F2BECEE21C1510500616E40 /* Tools.swift */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		1F2BECF021C1640400616E40 /* Delegates */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Delegates;
 			sourceTree = "<group>";
 		};
 		1F5A29F721AC73190039CC87 /* Hero */ = {

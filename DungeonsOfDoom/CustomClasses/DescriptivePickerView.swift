@@ -43,7 +43,7 @@ class DescriptivePickerView: UIPickerView {
             
             // Text inside view
             let text: UILabel = UILabel(frame: CGRect(x: 50, y: 0, width: 50, height: 50))
-//            text.text =
+            text.text = items[row].getDescription()
             text.textColor = UIColor.black
             text.font = UIFont(name: "Verdana", size: 30)
             // Add text to view

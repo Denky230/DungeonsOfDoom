@@ -10,6 +10,10 @@ import UIKit
 
 class GameVariables {
     
+    // ITEM POOL
+    static let gameItems: [Item] = [
+    ]
+    
     // SHOP
     static let shopStartingItems: [ShopItem] = [
         ShopItem(
@@ -33,6 +37,39 @@ class GameVariables {
             armorPiece: .chest,
             armorType: .plate,
             price: 2000
+        ),
+        ShopItem(
+            name: "item_03",
+            sprite: UIImage(named: "dice20")!,
+            statsTable: StatsTable(stats: [
+                .attack : 10,
+                .defense : 2
+                ]),
+            armorPiece: .head,
+            armorType: .plate,
+            price: 10
+        ),
+        ShopItem(
+            name: "item_04",
+            sprite: UIImage(named: "dice20")!,
+            statsTable: StatsTable(stats: [
+                .attack : 10,
+                .defense : 2
+                ]),
+            armorPiece: .head,
+            armorType: .plate,
+            price: 10
+        ),
+        ShopItem(
+            name: "item_05",
+            sprite: UIImage(named: "dice20")!,
+            statsTable: StatsTable(stats: [
+                .attack : 10,
+                .defense : 2
+                ]),
+            armorPiece: .head,
+            armorType: .plate,
+            price: 10
         )
     ]
 }

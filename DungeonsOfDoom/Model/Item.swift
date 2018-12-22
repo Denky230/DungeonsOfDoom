@@ -27,9 +27,16 @@ class Item : Describable {
     
     func getName() -> String { return self.name }
     func getSprite() -> UIImage { return self.sprite }
-    func getStats() -> StatsTable { return self.statsTable }
+    func getStatsTable() -> StatsTable { return self.statsTable }
     func getArmorPiece() -> ArmorPiece { return self.armorPiece }
     func getArmorType() -> ArmorType { return self.armorType }
     
-    func getDescription() {}
+    func getDescription() -> String {
+        var string: String = self.name
+        for stat in getStatsTable().getStats() {
+            string.append("\(stat.key): \(stat.value) - ")
+        }
+        
+        return string
+    }
 }

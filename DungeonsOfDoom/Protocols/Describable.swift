@@ -10,5 +10,5 @@ import UIKit
 
 protocol Describable {
     var sprite: UIImage { set get }
-    func getDescription()
+    func getDescription() -> String
 }

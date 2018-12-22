@@ -29,5 +29,5 @@ class Monster: Describable {
         // TO DO: Attack logic
     }
     
-    func getDescription() {}
+    func getDescription() -> String { return "" }
 }

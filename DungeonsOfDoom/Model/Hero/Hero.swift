@@ -37,7 +37,7 @@ class Hero : Describable {
         // Loop hero items
         for item in equipment.getItems() {
             // Add the right stat
-            total += item.getStats().getStat(stat: stat)
+            total += item.getStatsTable().getStat(stat: stat)
         }
         
         return total
@@ -45,7 +45,14 @@ class Hero : Describable {
     
     func getMoney() -> Int { return self.money }
     
-    func getDescription() {}
+    func getDescription() -> String {
+        var string: String = self.name
+        for item in equipment.getItems() {
+            string.append("\n\(item.getDescription())")
+        }
+        
+        return string
+    }
     func getLifes() -> Int {
         return self.lifes
     }

@@ -17,5 +17,7 @@ class StatsTable {
     }
     
     func getStat(stat: Stat) -> Int { return self.stats[stat]! }
-    func setStat(stat: Stat, newValue: Int) { self.stats[stat] = newValue }
+    func setStat(stat: Stat, newValue: Int) { self.stats[stat] = newValue } 
+    
+    func getStats() -> [Stat : Int] { return self.stats }
 }
