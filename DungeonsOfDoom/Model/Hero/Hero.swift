@@ -43,6 +43,8 @@ class Hero : Describable {
         return total
     }
     
+    func getName() -> String { return self.name }
+    func getLifes() -> Int { return self.lifes }
     func getMoney() -> Int { return self.money }
     
     func getDescription() -> String {
@@ -52,8 +54,5 @@ class Hero : Describable {
         }
         
         return string
-    }
-    func getLifes() -> Int {
-        return self.lifes
     }
 }
