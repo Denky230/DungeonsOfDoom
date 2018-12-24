@@ -24,13 +24,11 @@ class HeroInfoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        currHero = Hunter(name: "RIP Mr.G")
-        
         initHeroInfoPanel()
     }
     
     func initHeroInfoPanel() {
-        heroInfoPanel = HeroPanelView(frame: storyView.frame, hero: currHero!)
+        heroInfoPanel = HeroPanelView(frame: storyView.frame, hero: currHero)
         heroInfoPanel.backgroundColor = UIColor.black
         self.view.addSubview(heroInfoPanel)
     }

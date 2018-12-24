@@ -6,11 +6,11 @@
 //  Copyright © 2018 Oscar Rossello. All rights reserved.
 //
 
-var currHero : Hero?
+var currHero: Hero = Hunter(name: "RIP Mr.G")
 
 class GameManager {
     
     func initGame() {
-        
+        currHero = Hunter(name: "RIP Mr.G")
     }
 }

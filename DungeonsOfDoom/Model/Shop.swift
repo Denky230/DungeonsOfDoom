@@ -16,9 +16,11 @@ class Shop {
     
     static func buyItem(item: ShopItem) {
         // Check if hero has enough money
-        if currHero!.getMoney() >= item.price {
+        if currHero.getMoney() >= item.getPrice() {
             // TO DO: buy item
             print("item bought")
+            currHero.getEquipment().equipItem(item: item)
+            currHero.setMoney(money: currHero.getMoney() - item.getPrice())
         } else {
             print("not enough money")
         }

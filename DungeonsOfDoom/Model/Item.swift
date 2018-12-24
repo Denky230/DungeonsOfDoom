@@ -32,9 +32,9 @@ class Item : Describable {
     func getArmorType() -> ArmorType { return self.armorType }
     
     func getDescription() -> String {
-        var string: String = self.name
+        var string: String = "\(self.armorPiece) \(self.armorType)"
         for stat in getStatsTable().getStats() {
-            string.append("\(stat.key): \(stat.value) - ")
+            string.append(" \(stat.key): \(stat.value) - ")
         }
         
         return string

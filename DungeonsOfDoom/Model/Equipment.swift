@@ -31,7 +31,9 @@ class Equipment {
         var items: [Item] = [Item]()
         // Get Item in every ItemSlot
         for itemSlot in itemSlots.values {
-            items.append(itemSlot.getItem())
+            if !itemSlot.isEmpty() {
+                items.append(itemSlot.getItem())
+            }
         }
         
         return items
@@ -43,6 +45,8 @@ class Equipment {
             if item.getArmorType() == armorType {
                 // Equip item in the right slot
                 itemSlots[item.getArmorPiece()]!.setItem(item: item)
+                print("Item equipped")
+                break
             }
         }
     }

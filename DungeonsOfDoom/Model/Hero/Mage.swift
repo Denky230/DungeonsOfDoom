@@ -11,6 +11,13 @@ import Foundation
 class Mage: Hero {
 
     init(name: String) {
-        super.init(name: name, sprite: ClassProperties.Mage.sprite!, lifes: ClassProperties.Mage.startingLifes, equipment: ClassProperties.Mage.startingEquipment, baseStats: ClassProperties.Mage.baseStats)
+        super.init(
+            name: name,
+            sprite: ClassProperties.Mage.sprite!,
+            lifes: ClassProperties.Mage.baseLifes,
+            baseStats: ClassProperties.Mage.baseStats,
+            equipment: Equipment(wearableArmorTypes: ClassProperties.Mage.wearableArmorTypes),
+            baseItems: ClassProperties.Mage.baseItems
+        )
     }
 }

@@ -33,19 +33,19 @@ class DescriptivePickerView: UIPickerView {
         func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
             
             // Each row's view
-            let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+            let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
             
             // ImageView inside view
-            let imageView: UIImageView = UIImageView(frame: CGRect(x: -50, y: 25, width: 50, height: 50))
+            let imageView: UIImageView = UIImageView(frame: CGRect(x: 0, y: 25, width: 50, height: 50))
             // Add image to imageView + imageView to view
             imageView.image = items[row].sprite
             view.addSubview(imageView)
             
             // Text inside view
-            let text: UILabel = UILabel(frame: CGRect(x: 50, y: 0, width: 50, height: 50))
+            let text: UILabel = UILabel(frame: CGRect(x: 100, y: 0, width: view.frame.width - imageView.frame.width, height: view.frame.height))
+            text.font = UIFont(name: "Verdana", size: 15)
+            text.numberOfLines = 0
             text.text = items[row].getDescription()
-            text.textColor = UIColor.black
-            text.font = UIFont(name: "Verdana", size: 30)
             // Add text to view
             view.addSubview(text)
             

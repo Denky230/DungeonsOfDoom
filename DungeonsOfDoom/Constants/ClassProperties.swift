@@ -14,13 +14,19 @@ class ClassProperties {
     // WARRIOR
     struct Warrior {
         static let sprite = UIImage(named: "warrior")
-        static let startingLifes: Int = 5
-        static let startingEquipment: Equipment =
-            Equipment(wearableArmorTypes: [
+        static let baseLifes: Int = 5
+        static let wearableArmorTypes: [ArmorType] = [
                 .plate,
                 .mail,
                 .cloth
-            ])
+            ]
+        static let baseItems: [Item] = [
+                Item(name: "item_01", sprite: UIImage(), statsTable: StatsTable(stats: [.attack : 5]), armorPiece: .head, armorType: .plate),
+                Item(name: "item_02", sprite: UIImage(), statsTable: StatsTable(stats: [.attack : 10]), armorPiece: .chest, armorType: .plate),
+                Item(name: "item_03", sprite: UIImage(), statsTable: StatsTable(stats: [.defense : 5]), armorPiece: .gloves, armorType: .plate),
+                Item(name: "item_04", sprite: UIImage(), statsTable: StatsTable(stats: [.defense : 5]), armorPiece: .pants, armorType: .plate),
+                Item(name: "item_05", sprite: UIImage(), statsTable: StatsTable(stats: [.luck : 10]), armorPiece: .boots, armorType: .plate),
+            ]
         static let baseStats: StatsTable =
             StatsTable(stats: [
                 .attack : 5,
@@ -33,12 +39,18 @@ class ClassProperties {
     // HUNTER
     struct Hunter {
         static let sprite = UIImage(named: "hunter")
-        static let startingLifes: Int = 3
-        static let startingEquipment: Equipment =
-            Equipment(wearableArmorTypes: [
+        static let baseLifes: Int = 3
+        static let wearableArmorTypes: [ArmorType] = [
                 .mail,
                 .cloth
-            ])
+            ]
+        static let baseItems: [Item] = [
+                Item(name: "item_01", sprite: UIImage(), statsTable: StatsTable(stats: [.attack : 1]), armorPiece: .head, armorType: .mail),
+                Item(name: "item_02", sprite: UIImage(), statsTable: StatsTable(stats: [.attack : 1]), armorPiece: .chest, armorType: .mail),
+                Item(name: "item_03", sprite: UIImage(), statsTable: StatsTable(stats: [.defense : 1]), armorPiece: .gloves, armorType: .mail),
+                Item(name: "item_04", sprite: UIImage(), statsTable: StatsTable(stats: [.defense : 1]), armorPiece: .pants, armorType: .mail),
+                Item(name: "item_05", sprite: UIImage(), statsTable: StatsTable(stats: [.luck : 1]), armorPiece: .boots, armorType: .mail),
+            ]
         static let baseStats: StatsTable =
             StatsTable(stats: [
                 .attack : 8,
@@ -51,11 +63,10 @@ class ClassProperties {
     // MAGE
     struct Mage {
         static let sprite = UIImage(named: "mage")
-        static let startingLifes: Int = 2
-        static let startingEquipment: Equipment =
-            Equipment(wearableArmorTypes: [
+        static let baseLifes: Int = 2
+        static let wearableArmorTypes: [ArmorType] = [
                 .cloth
-            ])
+            ]
         static let baseStats: StatsTable =
             StatsTable(stats: [
                 .attack : 10,
@@ -63,22 +74,25 @@ class ClassProperties {
                 .magic : 5,
                 .luck : 2
             ])
+        static let baseItems: [Item] = [
+            
+        ]
     }
     
     // WARLOCK
     struct Warlock {
         static let sprite = UIImage(named: "warlock")
-        static let startingLifes: Int = 2
+        static let baseLifes: Int = 2
         static let startingEquipment: Equipment =
             Equipment(wearableArmorTypes: [
                 .cloth
-                ])
+            ])
         static let baseStats: StatsTable =
             StatsTable(stats: [
                 .attack : 10,
                 .defense : 2,
                 .magic : 5,
                 .luck : 2
-                ])
+            ])
     }
 }

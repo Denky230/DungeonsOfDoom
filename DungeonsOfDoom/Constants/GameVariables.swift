@@ -24,7 +24,7 @@ class GameVariables {
                 .defense : 2
             ]),
             armorPiece: .head,
-            armorType: .plate,
+            armorType: .mail,
             price: 10
         ),
         ShopItem(
@@ -32,7 +32,7 @@ class GameVariables {
             sprite: UIImage(named: "dice20")!,
             statsTable: StatsTable(stats: [
                 .attack : 5,
-                .defense : 5
+                .magic : 5
             ]),
             armorPiece: .chest,
             armorType: .plate,
@@ -46,15 +46,15 @@ class GameVariables {
                 .defense : 2
                 ]),
             armorPiece: .head,
-            armorType: .plate,
+            armorType: .cloth,
             price: 10
         ),
         ShopItem(
             name: "item_04",
             sprite: UIImage(named: "dice20")!,
             statsTable: StatsTable(stats: [
-                .attack : 10,
-                .defense : 2
+                .attack : 20,
+                .luck : 2
                 ]),
             armorPiece: .head,
             armorType: .plate,

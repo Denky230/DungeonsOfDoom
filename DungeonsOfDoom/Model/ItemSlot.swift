@@ -6,12 +6,11 @@
 //  Copyright © 2018 Oscar Rossello. All rights reserved.
 //
 
-import Foundation
-
 class ItemSlot {
     
     private var item: Item?
     
-    func getItem() -> Item { return self.item! }    
+    func isEmpty() -> Bool { return item == nil }
+    func getItem() -> Item { return self.item! }
     func setItem(item: Item) { self.item = item }
 }
