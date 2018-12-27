@@ -15,61 +15,60 @@ class GameVariables {
     ]
     
     // SHOP
-    static let shopStartingItems: [ShopItem] = [
-        ShopItem(
+    static let shopStartingItems: [PricedItem] = [
+        Item(
             name: "item_01",
             sprite: UIImage(named: "dice20")!,
+            price: 10,
             statsTable: StatsTable(stats: [
-                .attack : 10,
-                .defense : 2
+                .ATK : 10
             ]),
             armorPiece: .head,
-            armorType: .mail,
-            price: 10
+            armorType: .mail
         ),
-        ShopItem(
+        Item(
             name: "item_02",
             sprite: UIImage(named: "dice20")!,
+            price: 1000,
             statsTable: StatsTable(stats: [
-                .attack : 5,
-                .magic : 5
+                .ATK : 5,
+                .MAG : 5
             ]),
             armorPiece: .chest,
-            armorType: .plate,
-            price: 2000
+            armorType: .plate
         ),
-        ShopItem(
+        Item(
             name: "item_03",
             sprite: UIImage(named: "dice20")!,
+            price: 1000,
             statsTable: StatsTable(stats: [
-                .attack : 10,
-                .defense : 2
+                .ATK : 10,
+                .DEF : 2
                 ]),
             armorPiece: .head,
-            armorType: .cloth,
-            price: 10
+            armorType: .cloth
         ),
-        ShopItem(
+        Item(
             name: "item_04",
             sprite: UIImage(named: "dice20")!,
+            price: 1000,
             statsTable: StatsTable(stats: [
-                .attack : 20,
-                .luck : 2
+                .ATK : 20,
+                .LCK : 2
                 ]),
             armorPiece: .head,
-            armorType: .plate,
-            price: 10
+            armorType: .plate
         ),
-        ShopItem(
+        Item(
             name: "item_05",
             sprite: UIImage(named: "dice20")!,
+            price: 1000,
             statsTable: StatsTable(stats: [
-                .attack : 10,
-                .defense : 2
+                .ATK : 10,
+                .DEF : 2
                 ]),
             armorPiece: .head,
-            armorType: .plate,
-            price: 10
+            armorType: .plate
         )
     ]
 }

@@ -36,11 +36,9 @@ class Hero : Describable {
     func getMoney() -> Int { return self.money }
     func getEquipment() -> Equipment { return self.equipment }
     
-    func setMoney(money: Int) {
-        self.money = money
-    }
+    func setMoney(money: Int) { self.money = money }
     
-    func equipBaseItems(items: [Item]) {
+    private func equipBaseItems(items: [Item]) {
         let equipment: Equipment = getEquipment()
         for item in items {
             equipment.equipItem(item: item)
@@ -60,19 +58,18 @@ class Hero : Describable {
         
         return total
     }
+    
     func getDescription() -> String {
         var string: String = ""
-        // Append each item's description
-        for item in equipment.getItems() {
-            string.append("\(item.getDescription())\n")
-        }
         // Append each stat's total
-//        for stat in baseStats.getStats() {
-//            string.append("\(stat.key) \(stat.value + getTotalStatFromItems(stat: stat.key)) - ")
-//        }
+        let statsSorted = baseStats.getStats().sorted(by: { $0.key.rawValue < $1.key.rawValue })
+        for stat in statsSorted {
+            string.append("\(stat.key) \(stat.value + getTotalStatFromItems(stat: stat.key))\n")
+        }
         
         return string
     }
+    
     func Attack() {
         // TO DO: Attack logic
     }

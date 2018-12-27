@@ -14,26 +14,32 @@ class ShopViewController: UIViewController {
     var shopPickerView: DescriptivePickerView!
     @IBOutlet weak var storyPickerView: UIPickerView!
     
+    @IBOutlet weak var currHeroMoney: UILabel!
+    
     // Buttons
     @IBAction func btnBack(_ sender: UIButton) {
         let heroInfoVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HeroInfoVC") as UIViewController
         present(heroInfoVC, animated: true, completion: nil)
     }
     @IBAction func btnPurchase(_ sender: UIButton) {
-        let itemToBuy: ShopItem = Shop.getShopItem(index: shopPickerView.selectedRow(inComponent: 0))
+        // Buy item
+        let itemToBuy: PricedItem = Shop.getShopItem(index: shopPickerView.selectedRow(inComponent: 0))
         Shop.buyItem(item: itemToBuy)
+        // Update hero's money
+        currHeroMoney.text = String(currHero.getMoney())
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        currHeroMoney.text = String(currHero.getMoney())
         initPickerView()
     }
     
     func initPickerView() {
         // Initialize shopPickerView with storyboard pickerView's frame + Shop items
-        shopPickerView = DescriptivePickerView(frame: storyPickerView.frame, items: Shop.getShopItems())
+        shopPickerView = DescriptivePickerView(frame: storyPickerView.frame, items: Shop.getShopItems() as! [Describable])
         view.addSubview(shopPickerView)
     }
 }

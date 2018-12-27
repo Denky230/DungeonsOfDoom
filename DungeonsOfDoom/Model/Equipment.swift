@@ -46,8 +46,10 @@ class Equipment {
                 // Equip item in the right slot
                 itemSlots[item.getArmorPiece()]!.setItem(item: item)
                 print("Item equipped")
-                break
+                return
             }
         }
+        
+        // TO DO: Error invalid armorType
     }
 }

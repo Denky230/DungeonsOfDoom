@@ -8,19 +8,20 @@
 
 class Shop {
     
-    static private var shopItems: [ShopItem] = GameVariables.shopStartingItems
+    static private var shopItems: [PricedItem] = GameVariables.shopStartingItems
     
-    static func getShopItem(index: Int) -> ShopItem { return self.shopItems[index] }
-    static func getShopItems() -> [ShopItem] { return self.shopItems }
-    static func addItem(item: ShopItem) { shopItems.append(item) }
+    static func getShopItem(index: Int) -> PricedItem { return self.shopItems[index] }
+    static func getShopItems() -> [PricedItem] { return self.shopItems }
+    static func addItem(item: PricedItem) { shopItems.append(item) }
     
-    static func buyItem(item: ShopItem) {
+    static func buyItem(item: PricedItem) {
         // Check if hero has enough money
-        if currHero.getMoney() >= item.getPrice() {
-            // TO DO: buy item
+        if currHero.getMoney() >= item.price {
+            // Buy item
+            currHero.setMoney(money: currHero.getMoney() - item.price)
             print("item bought")
-            currHero.getEquipment().equipItem(item: item)
-            currHero.setMoney(money: currHero.getMoney() - item.getPrice())
+            // Equip item
+            currHero.getEquipment().equipItem(item: item as! Item)
         } else {
             print("not enough money")
         }

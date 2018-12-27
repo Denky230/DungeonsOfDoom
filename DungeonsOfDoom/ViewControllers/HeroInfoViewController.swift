@@ -29,7 +29,7 @@ class HeroInfoViewController: UIViewController {
     
     func initHeroInfoPanel() {
         heroInfoPanel = HeroPanelView(frame: storyView.frame, hero: currHero)
-        heroInfoPanel.backgroundColor = UIColor.black
+        heroInfoPanel.backgroundColor = UIColor.cyan
         self.view.addSubview(heroInfoPanel)
     }
 }

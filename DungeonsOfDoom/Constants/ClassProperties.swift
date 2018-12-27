@@ -6,7 +6,6 @@
 //  Copyright © 2018 Oscar Rossello. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class ClassProperties {
@@ -21,18 +20,18 @@ class ClassProperties {
                 .cloth
             ]
         static let baseItems: [Item] = [
-                Item(name: "item_01", sprite: UIImage(), statsTable: StatsTable(stats: [.attack : 5]), armorPiece: .head, armorType: .plate),
-                Item(name: "item_02", sprite: UIImage(), statsTable: StatsTable(stats: [.attack : 10]), armorPiece: .chest, armorType: .plate),
-                Item(name: "item_03", sprite: UIImage(), statsTable: StatsTable(stats: [.defense : 5]), armorPiece: .gloves, armorType: .plate),
-                Item(name: "item_04", sprite: UIImage(), statsTable: StatsTable(stats: [.defense : 5]), armorPiece: .pants, armorType: .plate),
-                Item(name: "item_05", sprite: UIImage(), statsTable: StatsTable(stats: [.luck : 10]), armorPiece: .boots, armorType: .plate),
+            Item(name: "item_01", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.ATK : 5]), armorPiece: .head, armorType: .plate),
+                Item(name: "item_02", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.ATK : 10]), armorPiece: .chest, armorType: .plate),
+                Item(name: "item_03", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.DEF : 5]), armorPiece: .gloves, armorType: .plate),
+                Item(name: "item_04", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.DEF : 5]), armorPiece: .pants, armorType: .plate),
+                Item(name: "item_05", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.LCK : 10]), armorPiece: .boots, armorType: .plate),
             ]
         static let baseStats: StatsTable =
             StatsTable(stats: [
-                .attack : 5,
-                .defense : 5,
-                .magic : 0,
-                .luck : 2
+                .ATK : 5,
+                .DEF : 5,
+                .MAG : 0,
+                .LCK : 2
             ])
     }
     
@@ -45,18 +44,18 @@ class ClassProperties {
                 .cloth
             ]
         static let baseItems: [Item] = [
-                Item(name: "item_01", sprite: UIImage(), statsTable: StatsTable(stats: [.attack : 1]), armorPiece: .head, armorType: .mail),
-                Item(name: "item_02", sprite: UIImage(), statsTable: StatsTable(stats: [.attack : 1]), armorPiece: .chest, armorType: .mail),
-                Item(name: "item_03", sprite: UIImage(), statsTable: StatsTable(stats: [.defense : 1]), armorPiece: .gloves, armorType: .mail),
-                Item(name: "item_04", sprite: UIImage(), statsTable: StatsTable(stats: [.defense : 1]), armorPiece: .pants, armorType: .mail),
-                Item(name: "item_05", sprite: UIImage(), statsTable: StatsTable(stats: [.luck : 1]), armorPiece: .boots, armorType: .mail),
+                Item(name: "item_01", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.ATK : 1]), armorPiece: .head, armorType: .mail),
+                Item(name: "item_02", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.ATK : 1]), armorPiece: .chest, armorType: .mail),
+                Item(name: "item_03", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.DEF : 1]), armorPiece: .gloves, armorType: .mail),
+                Item(name: "item_04", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.DEF : 1]), armorPiece: .pants, armorType: .mail),
+                Item(name: "item_05", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.LCK : 1]), armorPiece: .boots, armorType: .mail),
             ]
         static let baseStats: StatsTable =
             StatsTable(stats: [
-                .attack : 8,
-                .defense : 4,
-                .magic : 2,
-                .luck : 2
+                .ATK : 8,
+                .DEF : 4,
+                .MAG : 2,
+                .LCK : 2
             ])
     }
     
@@ -69,10 +68,10 @@ class ClassProperties {
             ]
         static let baseStats: StatsTable =
             StatsTable(stats: [
-                .attack : 10,
-                .defense : 2,
-                .magic : 5,
-                .luck : 2
+                .ATK : 10,
+                .DEF : 2,
+                .MAG : 5,
+                .LCK : 2
             ])
         static let baseItems: [Item] = [
             
@@ -89,10 +88,10 @@ class ClassProperties {
             ])
         static let baseStats: StatsTable =
             StatsTable(stats: [
-                .attack : 10,
-                .defense : 2,
-                .magic : 5,
-                .luck : 2
+                .ATK : 10,
+                .DEF : 2,
+                .MAG : 5,
+                .LCK : 2
             ])
     }
 }
