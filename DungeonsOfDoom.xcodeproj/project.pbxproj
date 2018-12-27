@@ -204,7 +204,6 @@
 				FA33211421A76BC00048AB25 /* Item.swift */,
 				1F5A29F321AC70540039CC87 /* StatsTable.swift */,
 				1F0CF6DA21A5A74F0024DD67 /* Monster.swift */,
-				1FD6A89421B7025100CC1573 /* PricedItem.swift */,
 				1FD6A89621B7031C00CC1573 /* Shop.swift */,
 			);
 			path = Model;
@@ -241,6 +240,7 @@
 		1FD6A89121B6FC6A00CC1573 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				1FD6A89421B7025100CC1573 /* PricedItem.swift */,
 				1FD6A89221B6FC7B00CC1573 /* Describable.swift */,
 			);
 			path = Protocols;

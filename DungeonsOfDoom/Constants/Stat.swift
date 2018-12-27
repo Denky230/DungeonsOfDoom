@@ -6,11 +6,10 @@
 //  Copyright © 2018 Oscar Rossello. All rights reserved.
 //
 
-import Foundation
-
-enum Stat {
-    case attack
-    case defense
-    case magic
-    case luck
+enum Stat: Int {
+    
+    case ATK = 0
+    case DEF = 1
+    case MAG = 2
+    case LCK = 3
 }
