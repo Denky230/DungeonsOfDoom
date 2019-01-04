@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameVariables {
+class GameData {
     
     // ITEM POOL
     static let gameItems: [Item] = [
@@ -44,7 +44,7 @@ class GameVariables {
             statsTable: StatsTable(stats: [
                 .ATK : 10,
                 .DEF : 2
-                ]),
+            ]),
             armorPiece: .head,
             armorType: .cloth
         ),
@@ -55,7 +55,7 @@ class GameVariables {
             statsTable: StatsTable(stats: [
                 .ATK : 20,
                 .LCK : 2
-                ]),
+            ]),
             armorPiece: .head,
             armorType: .plate
         ),
@@ -66,9 +66,27 @@ class GameVariables {
             statsTable: StatsTable(stats: [
                 .ATK : 10,
                 .DEF : 2
-                ]),
+            ]),
             armorPiece: .head,
             armorType: .plate
+        )
+    ]
+    
+    // MONSTERS
+    static var monsterTable: [Monster] = [
+        Monster(
+            name: "monster_01",
+            sprite: UIImage(named: "dice1U")!,
+            lifes: 2,
+            attack: 10,
+            moneyDrop: 10
+        ),
+        Monster(
+            name: "monster_02",
+            sprite: UIImage(named: "dice2U")!,
+            lifes: 2,
+            attack: 20,
+            moneyDrop: 10
         )
     ]
 }

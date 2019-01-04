@@ -8,31 +8,27 @@
 
 import UIKit
 
-class Hero : Describable {
+class Hero: BattleUnit, Describable {
     
     internal var sprite: UIImage
     
     private var name: String
-    private var lifes: Int
     private var money: Int
     private var experience: Int
     private let equipment: Equipment
-    private let baseStats: StatsTable
     
     init(name: String, sprite: UIImage, lifes: Int, baseStats: StatsTable, equipment: Equipment, baseItems: [Item]) {
         self.name = name
         self.sprite = sprite
-        self.lifes = lifes
         self.money = 500
         self.experience = 0
-        self.baseStats = baseStats
         self.equipment = equipment
         
+        super.init(lifes: lifes, stats: baseStats)
         equipBaseItems(items: baseItems)
     }
     
     func getName() -> String { return self.name }
-    func getLifes() -> Int { return self.lifes }
     func getMoney() -> Int { return self.money }
     func getEquipment() -> Equipment { return self.equipment }
     
@@ -62,15 +58,11 @@ class Hero : Describable {
     func getDescription() -> String {
         var string: String = ""
         // Append each stat's total
-        let statsSorted = baseStats.getStats().sorted(by: { $0.key.rawValue < $1.key.rawValue })
+        let statsSorted = getStatsTable().getStats().sorted(by: { $0.key.rawValue < $1.key.rawValue })
         for stat in statsSorted {
-            string.append("\(stat.key) \(stat.value + getTotalStatFromItems(stat: stat.key))\n")
+            string.append("\(stat.key) - \(stat.value + getTotalStatFromItems(stat: stat.key))\n")
         }
         
         return string
-    }
-    
-    func Attack() {
-        // TO DO: Attack logic
     }
 }

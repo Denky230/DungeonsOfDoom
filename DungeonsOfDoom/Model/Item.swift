@@ -39,11 +39,11 @@ class Item : Describable, PricedItem {
     func getArmorType() -> ArmorType { return self.armorType }
     
     func getDescription() -> String {
-        var string: String = "\(self.armorPiece) \(self.armorType)\n"
+        var string: String = "\(self.armorPiece) \(self.armorType)"
         // Append every stat + value
         let statsSorted = getStatsTable().getStats().sorted(by: { $0.key.rawValue < $1.key.rawValue })
         for stat in statsSorted {
-            string.append("\n\(stat.key): \(stat.value)")
+            string.append("\n\(stat.key) - \(stat.value)")
         }
         string.append("\nprice: \(self.price)")
         

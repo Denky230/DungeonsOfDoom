@@ -45,7 +45,6 @@ class Equipment {
             if item.getArmorType() == armorType {
                 // Equip item in the right slot
                 itemSlots[item.getArmorPiece()]!.setItem(item: item)
-                print("Item equipped")
                 return
             }
         }

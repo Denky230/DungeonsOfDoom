@@ -18,13 +18,16 @@ class ShopViewController: UIViewController {
     
     // Buttons
     @IBAction func btnBack(_ sender: UIButton) {
+        // Send to HeroInfo screen
         let heroInfoVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HeroInfoVC") as UIViewController
         present(heroInfoVC, animated: true, completion: nil)
     }
     @IBAction func btnPurchase(_ sender: UIButton) {
         // Buy item
-        let itemToBuy: PricedItem = Shop.getShopItem(index: shopPickerView.selectedRow(inComponent: 0))
+        let itemSelected = shopPickerView.selectedRow(inComponent: 0)
+        let itemToBuy = Shop.getShopItem(index: itemSelected)
         Shop.buyItem(item: itemToBuy)
+        
         // Update hero's money
         currHeroMoney.text = String(currHero.getMoney())
     }

@@ -38,11 +38,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8F-dQ-Yla">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8F-dQ-Yla" userLabel="Battle">
                                 <rect key="frame" x="216" y="520" width="89" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Fight"/>
+                                <state key="normal" title="Battle"/>
+                                <connections>
+                                    <action selector="btnBattle:" destination="jkU-Wy-Dbf" eventType="touchUpInside" id="Tdc-V0-ErA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG6-5e-Hz2">
                                 <rect key="frame" x="70" y="520" width="89" height="58"/>
@@ -65,6 +68,113 @@
             </objects>
             <point key="canvasLocation" x="789.60000000000002" y="25.637181409295355"/>
         </scene>
+        <!--Monster Selection View Controller-->
+        <scene sceneID="dP2-8q-5RU">
+            <objects>
+                <viewController storyboardIdentifier="MonsterSelectionVC" id="XaO-76-VAZ" customClass="MonsterSelectionViewController" customModule="DungeonsOfDoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gYE-iV-nZD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKZ-Ju-GRY">
+                                <rect key="frame" x="16" y="45" width="93" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="btnBack:" destination="pAV-dS-OBJ" eventType="touchUpInside" id="Zp7-rJ-waE"/>
+                                    <action selector="btnBack:" destination="XaO-76-VAZ" eventType="touchUpInside" id="zX8-lf-4gs"/>
+                                </connections>
+                            </button>
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVU-E6-v3I" userLabel="Story Picker View">
+                                <rect key="frame" x="58" y="142" width="259" height="221"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kM-Uf-JsU" userLabel="Fight">
+                                <rect key="frame" x="112" y="480" width="151" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Fight!"/>
+                                <connections>
+                                    <action selector="btnFight:" destination="XaO-76-VAZ" eventType="touchUpInside" id="YLY-oa-Ufj"/>
+                                    <action selector="btnPurchase:" destination="pAV-dS-OBJ" eventType="touchUpInside" id="QAc-gJ-Pdo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KZk-aU-OQI"/>
+                    </view>
+                    <connections>
+                        <outlet property="storyPickerView" destination="MVU-E6-v3I" id="PP7-ug-caj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eT1-l1-WDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1548" y="-323"/>
+        </scene>
+        <!--Battle View Controller-->
+        <scene sceneID="qfw-Xf-ksS">
+            <objects>
+                <viewController storyboardIdentifier="BattleVC" id="lt1-Kc-7PY" customClass="BattleViewController" customModule="DungeonsOfDoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xE4-YB-xXE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Buz-CP-BZX">
+                                <rect key="frame" x="16" y="45" width="93" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="btnBack:" destination="lt1-Kc-7PY" eventType="touchUpInside" id="3N2-ig-Jn6"/>
+                                    <action selector="btnBack:" destination="pAV-dS-OBJ" eventType="touchUpInside" id="MA7-at-bPg"/>
+                                    <action selector="btnBack:" destination="XaO-76-VAZ" eventType="touchUpInside" id="Yiu-7d-tkN"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NXi-vA-uaq">
+                                <rect key="frame" x="78" y="129" width="218" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U9z-ig-s7R">
+                                <rect key="frame" x="50" y="343" width="275" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BtW-Ki-ePo">
+                                <rect key="frame" x="50" y="223" width="275" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oah-fk-bmA">
+                                <rect key="frame" x="78" y="431" width="218" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctc-wW-FkN">
+                                <rect key="frame" x="112" y="544" width="151" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Attack"/>
+                                <connections>
+                                    <action selector="btnAttack:" destination="lt1-Kc-7PY" eventType="touchUpInside" id="3X8-h2-QVb"/>
+                                    <action selector="btnFight:" destination="XaO-76-VAZ" eventType="touchUpInside" id="shH-Xp-7wi"/>
+                                    <action selector="btnPurchase:" destination="pAV-dS-OBJ" eventType="touchUpInside" id="FMn-bb-ets"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IpW-D3-j1T"/>
+                    </view>
+                    <connections>
+                        <outlet property="enemyStoryPickerView" destination="BtW-Ki-ePo" id="sqf-5l-JTo"/>
+                        <outlet property="enemyStoryView" destination="NXi-vA-uaq" id="jjb-QB-us5"/>
+                        <outlet property="heroStoryPickerView" destination="U9z-ig-s7R" id="OLd-eo-Enh"/>
+                        <outlet property="heroStoryView" destination="Oah-fk-bmA" id="Czh-nI-raJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omn-Vg-S3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2264.8000000000002" y="-323.38830584707648"/>
+        </scene>
         <!--Shop View Controller-->
         <scene sceneID="0rb-QG-gZt">
             <objects>
@@ -73,17 +183,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULP-bi-yfV">
-                                <rect key="frame" x="35" y="47" width="93" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="btnBack:" destination="pAV-dS-OBJ" eventType="touchUpInside" id="TQP-29-Ch9"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5z-13-CHQ">
-                                <rect key="frame" x="112" y="479" width="151" height="60"/>
+                                <rect key="frame" x="112" y="480" width="151" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Purchase"/>
@@ -102,6 +203,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULP-bi-yfV">
+                                <rect key="frame" x="16" y="45" width="93" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="btnBack:" destination="pAV-dS-OBJ" eventType="touchUpInside" id="TQP-29-Ch9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="85P-Px-eOz"/>
@@ -113,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mMj-Oq-eyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528.8" y="25.637181409295355"/>
+            <point key="canvasLocation" x="1548" y="374"/>
         </scene>
     </scenes>
 </document>

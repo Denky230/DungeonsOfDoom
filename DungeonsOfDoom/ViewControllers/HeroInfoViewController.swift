@@ -19,17 +19,22 @@ class HeroInfoViewController: UIViewController {
         let shopVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShopVC") as UIViewController
         present(shopVC, animated: true, completion: nil)
     }
+    @IBAction func btnBattle(_ sender: UIButton) {
+        let monsterSelectionVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MonsterSelectionVC") as UIViewController
+        present(monsterSelectionVC, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        GameManager.initGame()
         initHeroInfoPanel()
     }
     
     func initHeroInfoPanel() {
         heroInfoPanel = HeroPanelView(frame: storyView.frame, hero: currHero)
         heroInfoPanel.backgroundColor = UIColor.cyan
-        self.view.addSubview(heroInfoPanel)
+        view.addSubview(heroInfoPanel)
     }
 }

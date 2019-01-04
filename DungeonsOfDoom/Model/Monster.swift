@@ -8,26 +8,41 @@
 
 import UIKit
 
-class Monster: Describable {
+class Monster: BattleUnit, Describable, Comparable {
     
     internal var sprite: UIImage
     
     private var name: String
-    private var lifes: Int
-    private var statsTable: StatsTable
     private let moneyDrop: Int
     
-    init(name: String, sprite: UIImage, lifes: Int, statsTable: StatsTable, moneyDrop: Int) {
+    init(name: String, sprite: UIImage, lifes: Int, attack: Int, moneyDrop: Int) {
         self.name = name
         self.sprite = sprite
-        self.lifes = lifes
-        self.statsTable = statsTable
         self.moneyDrop = moneyDrop
+        
+        super.init(lifes: lifes, stats: StatsTable(stats: [.ATK : attack]))
     }
     
-    public func Attack() {
-        // TO DO: Attack logic
+    func getName() -> String { return self.name }
+    func getMoneyDrop() -> Int { return self.moneyDrop }
+    
+    func getDescription() -> String {
+        var string: String = "\(self.name)\nlifes: \(getLifes())"
+        // Append each stat with its value
+        let statsSorted = getStatsTable().getStats().sorted(by: { $0.key.rawValue < $1.key.rawValue })
+        for stat in statsSorted {
+            string.append("\n\(stat.key) - \(stat.value)")
+        }
+        // Append money dropped
+        string.append("\nmoney: \(moneyDrop)")
+        
+        return string
     }
     
-    func getDescription() -> String { return "" }
+    static func < (lhs: Monster, rhs: Monster) -> Bool {
+        return lhs.getName() < rhs.getName()
+    }
+    static func == (lhs: Monster, rhs: Monster) -> Bool {
+        return lhs.getName() == rhs.getName()
+    }
 }
