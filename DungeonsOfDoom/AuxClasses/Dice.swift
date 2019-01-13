@@ -17,9 +17,6 @@ class Dice {
         self.sprite = sprite
         self.value = value
     }
-    convenience init() {
-        self.init(sprite: UIImage(named: "dice1")!, value: 1)
-    }
     
     func getSprite() -> UIImage { return self.sprite }
     func getValue() -> Int { return self.value }

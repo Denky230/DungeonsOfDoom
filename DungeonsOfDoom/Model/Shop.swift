@@ -19,7 +19,6 @@ class Shop {
         if currHero.getMoney() >= item.price {
             // Buy item
             currHero.setMoney(money: currHero.getMoney() - item.price)
-            print("item bought")
             // Equip item
             currHero.getEquipment().equipItem(item: item as! Item)
         } else {

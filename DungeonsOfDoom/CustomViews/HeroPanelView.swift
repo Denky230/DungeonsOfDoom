@@ -30,7 +30,7 @@ class HeroPanelView: UIView {
                 width: frame.width * 0.4,
                 height: frame.height
         ))
-        spriteView.backgroundColor = UIColor.gray
+        spriteView.backgroundColor = .gray
         spriteView.image = hero.sprite
         
         return spriteView
@@ -42,7 +42,7 @@ class HeroPanelView: UIView {
                 width: frame.width - sprite.frame.width,
                 height: frame.height
         ))
-        heroInfoView.backgroundColor = UIColor.orange
+        heroInfoView.backgroundColor = .orange
 
         // HERO NAME + HEARTS
         let heroNameView: UIView = UIView(frame: CGRect(
@@ -51,7 +51,7 @@ class HeroPanelView: UIView {
                 height: heroInfoView.frame.height * 0.5
         ))
         heroInfoView.addSubview(heroNameView)
-        heroNameView.backgroundColor = UIColor.yellow
+        heroNameView.backgroundColor = .yellow
 
         let heroName: UILabel = {
             let label: UILabel = UILabel(frame: CGRect(
@@ -59,12 +59,20 @@ class HeroPanelView: UIView {
                     width: heroNameView.frame.width,
                     height: heroNameView.frame.height / 2
             ))
-            label.backgroundColor = UIColor.green
+            label.backgroundColor = .green
             label.text = hero.getName()
 
             return label
         }()
         heroNameView.addSubview(heroName)
+        
+        let heroHeartsView: HeartsView = HeartsView(hearts: hero.getMaxLifes(), frame: CGRect(
+                x: 0,
+                y: heroName.frame.height,
+                width: heroNameView.frame.width,
+                height: heroNameView.frame.height / 2
+        ))
+        heroNameView.addSubview(heroHeartsView)
 
         // HERO STATS
         let heroStatsView: UIView = UIView(frame: CGRect(

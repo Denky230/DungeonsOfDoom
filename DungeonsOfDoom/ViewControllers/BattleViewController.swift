@@ -16,16 +16,10 @@ class BattleViewController: UIViewController {
         let heroInfoVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HeroInfoVC") as UIViewController
         present(heroInfoVC, animated: true, completion: nil)
     }
+    
     @IBAction func btnAttack(_ sender: UIButton) {
         // Start fight between Hero and selected enemy
-        GameManager.fight(
-                unit_01: BattleUnitController(unit: currHero, dices: heroPickerView, UI: heroPanelView),
-                unit_02: BattleUnitController(unit: selectedEnemy, dices: enemyPickerView, UI: enemyPanelView)
-        )
-        // Update battle units stats
-        updatePanelViews()
-        // Check for battle results
-        aftermath()
+        startFight()
     }
     
     // Panel Views
@@ -40,6 +34,9 @@ class BattleViewController: UIViewController {
     @IBOutlet weak var heroStoryPickerView: UIPickerView!
     @IBOutlet weak var enemyStoryPickerView: UIPickerView!
     
+    // Feedback
+    @IBOutlet weak var lblFeedback: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,24 +46,77 @@ class BattleViewController: UIViewController {
     }
     
     func initPanelViews() {
+        // Initialize custom views using storyboard frames
         heroPanelView = BattleUnitPanelView(frame: heroStoryView.frame, unit: currHero)
         enemyPanelView = BattleUnitPanelView(frame: enemyStoryView.frame, unit: selectedEnemy)
         view.addSubview(heroPanelView)
         view.addSubview(enemyPanelView)
     }
-    func initPickerViews() {
-        heroPickerView = DicesPickerView(frame: heroStoryPickerView.frame, dices: [Dice](repeating: Dice(), count: 10), components: 3)
-        enemyPickerView = DicesPickerView(frame: enemyStoryPickerView.frame, dices: [Dice](repeating: Dice(), count: 10), components: 2)
-        view.addSubview(heroPickerView)
-        view.addSubview(enemyPickerView)
-    }
-    
-    func updatePanelViews() {        
+    func updatePanelViews() {
         heroPanelView.setUpViews()
         enemyPanelView.setUpViews()
     }
     
-    func aftermath() {
+    func initPickerViews() {
+        // Make hero + enemy diceSets
+        let heroDices = DiceSet(formatString: "dice%dU", size: 12)
+        let enemyDices = DiceSet(formatString: "dice%d", size: 12)
+        
+        // Get hero + enemy dice number
+        let heroDiceNum = currHero.calculateDices()
+        let enemyDiceNum = selectedEnemy.calculateDices()
+        
+        // Initialize picker views using storyboard frames
+        heroPickerView =
+            DicesPickerView(frame: heroStoryPickerView.frame, dices: heroDices.getDices(), components: heroDiceNum)
+        enemyPickerView =
+            DicesPickerView(frame: enemyStoryPickerView.frame, dices: enemyDices.getDices(), components: enemyDiceNum)
+        view.addSubview(heroPickerView)
+        view.addSubview(enemyPickerView)
+    }
+    
+    func startFight() {
+        // Make BattleUnitControllers for hero + enemy
+        let heroController = BattleUnitController(unit: currHero, dices: heroPickerView, view: heroPanelView)
+        let enemyController = BattleUnitController(unit: selectedEnemy, dices: enemyPickerView, view: enemyPanelView)
+        
+        // Start fight between hero and selected enemy
+        fight(unit_01: heroController, unit_02: enemyController)
+        
+        // Update battle units stats
+        updatePanelViews()
+        // Check for battle results
+        checkAftermath()
+    }
+    func fight(unit_01: BattleUnitController, unit_02: BattleUnitController) {
+        var feedback: String = ""
+        var loser: BattleUnit!
+        
+        // Get units' hit power
+        let u01_hitPower: Int = unit_01.getHitPower()
+        let u02_hitPower: Int = unit_02.getHitPower()
+        
+        // Calculate battle results
+        if u01_hitPower > u02_hitPower {
+            // UNIT 1 WINS
+            loser = unit_02.getUnit()
+            feedback = "1 wins"
+        } else if u02_hitPower > u01_hitPower {	
+            // UNIT 2 WINS
+            loser = unit_01.getUnit()
+            feedback = "2 wins"
+        } else {
+            // TIE
+            feedback = "Empatasión"
+        }
+        
+        // Post fight
+        lblFeedback.text = feedback
+        if let l = loser {
+            l.takeDamage()
+        }
+    }
+    func checkAftermath() {
         // Check for battle results
         if currHero.getLifes() == 0 {
             defeat()
@@ -76,6 +126,8 @@ class BattleViewController: UIViewController {
     }
     
     func victory() {
+        // Reset hero
+        currHero.reset()
         // Loot enemy
         currHero.setMoney(money: currHero.getMoney() + selectedEnemy.getMoneyDrop())
         
@@ -83,23 +135,29 @@ class BattleViewController: UIViewController {
         if let index = GameData.monsterTable.firstIndex(where: { $0 == selectedEnemy }) {
             GameData.monsterTable.remove(at: index)
         }
+        // Check if there's any monster left
+        checkForGameOver()
         
-        // Check for Game Over
+        // Send to MonsterSelection screen
+        let monsterSelectionVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MonsterSelectionVC") as UIViewController
+        present(monsterSelectionVC, animated: true, completion: nil)
+    }
+    func defeat() {
+        // Reset units
+        currHero.reset()
+        selectedEnemy.reset()
+        
+        // Send to HeroInfo screen
+        let heroInfoVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HeroInfoVC") as UIViewController
+        present(heroInfoVC, animated: true, completion: nil)
+    }
+    
+    func checkForGameOver() {
+        // Check if there's any monster left
         if GameData.monsterTable.isEmpty {
             // Send to HeroInfo screen
             let heroInfoVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HeroInfoVC") as UIViewController
             present(heroInfoVC, animated: true, completion: nil)
-            
-        } else {
-            // Send to MonsterSelection screen
-            let monsterSelectionVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MonsterSelectionVC") as UIViewController
-            present(monsterSelectionVC, animated: true, completion: nil)
         }
-    }
-    
-    func defeat() {
-        // Send to HeroInfo screen
-        let heroInfoVC: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HeroInfoVC") as UIViewController
-        present(heroInfoVC, animated: true, completion: nil)
     }
 }

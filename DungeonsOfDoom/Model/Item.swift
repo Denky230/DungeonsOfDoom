@@ -33,7 +33,7 @@ class Item : Describable, PricedItem {
         self.armorType = armorType
     }
     
-    func getName() -> String { return self.name }
+    func getName() -> String { return self.name }    
     func getStatsTable() -> StatsTable { return self.statsTable }
     func getArmorPiece() -> ArmorPiece { return self.armorPiece }
     func getArmorType() -> ArmorType { return self.armorType }

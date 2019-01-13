@@ -44,7 +44,8 @@
 		FA33211521A76BC00048AB25 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33211421A76BC00048AB25 /* Item.swift */; };
 		FA33211821A772C60048AB25 /* ArmorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33211721A772C60048AB25 /* ArmorType.swift */; };
 		FA33211A21A773850048AB25 /* ArmorPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33211921A773850048AB25 /* ArmorPiece.swift */; };
-		FA64368E21D801970058B53E /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA64368D21D801970058B53E /* TODO.swift */; };
+		FA76B39921EBE3FF00AF8132 /* HeartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA76B39821EBE3FF00AF8132 /* HeartsView.swift */; };
+		FA7A374221E3DBFD00632FC6 /* DiceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A374121E3DBFD00632FC6 /* DiceSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +109,8 @@
 		FA33211421A76BC00048AB25 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FA33211721A772C60048AB25 /* ArmorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmorType.swift; sourceTree = "<group>"; };
 		FA33211921A773850048AB25 /* ArmorPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmorPiece.swift; sourceTree = "<group>"; };
-		FA64368D21D801970058B53E /* TODO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
+		FA76B39821EBE3FF00AF8132 /* HeartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartsView.swift; sourceTree = "<group>"; };
+		FA7A374121E3DBFD00632FC6 /* DiceSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,14 +161,13 @@
 		1F0CF60421A48B3A0022DEEB /* DungeonsOfDoom */ = {
 			isa = PBXGroup;
 			children = (
-				FA64368D21D801970058B53E /* TODO.swift */,
-				1F0CF60521A48B3A0022DEEB /* AppDelegate.swift */,
 				1F0CF60C21A48B3C0022DEEB /* Assets.xcassets */,
+				1F0CF60521A48B3A0022DEEB /* AppDelegate.swift */,
 				1F0CF61121A48B3C0022DEEB /* Info.plist */,
 				1F2BECED21C150E600616E40 /* Tools */,
 				1FD6A89121B6FC6A00CC1573 /* Protocols */,
 				FA16D63221D950B3002BCB78 /* AuxClasses */,
-				1F0CF6D721A5A4FD0024DD67 /* CustomClasses */,
+				1F0CF6D721A5A4FD0024DD67 /* CustomViews */,
 				FA33211621A770A90048AB25 /* Constants */,
 				1F0CF63521A48E330022DEEB /* Model */,
 				1FDCB8F821ADBAAA00D22229 /* Managers */,
@@ -230,15 +231,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		1F0CF6D721A5A4FD0024DD67 /* CustomClasses */ = {
+		1F0CF6D721A5A4FD0024DD67 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				1F0CF6D821A5A5880024DD67 /* DescriptivePickerView.swift */,
 				FA16D63021D9501C002BCB78 /* DicesPickerView.swift */,
 				1F030C9E21AEE21000AE31C5 /* HeroPanelView.swift */,
 				FA16D63521D95A9A002BCB78 /* BattleUnitPanelView.swift */,
+				FA76B39821EBE3FF00AF8132 /* HeartsView.swift */,
 			);
-			path = CustomClasses;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		1F2BECED21C150E600616E40 /* Tools */ = {
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				FA16D63321D950CB002BCB78 /* Dice.swift */,
+				FA7A374121E3DBFD00632FC6 /* DiceSet.swift */,
 				FA13AE9421DD1B6B00E5F002 /* BattleUnitController.swift */,
 			);
 			path = AuxClasses;
@@ -435,6 +438,7 @@
 				1F5A29F921AC73420039CC87 /* Warrior.swift in Sources */,
 				1FD6A89521B7025100CC1573 /* PricedItem.swift in Sources */,
 				1F5A29F621AC710F0039CC87 /* Stat.swift in Sources */,
+				FA76B39921EBE3FF00AF8132 /* HeartsView.swift in Sources */,
 				FA33211321A76B670048AB25 /* Equipment.swift in Sources */,
 				1F0CF6D421A5A0330024DD67 /* ItemSlot.swift in Sources */,
 				1F030C9C21AEDF8E00AE31C5 /* GameData.swift in Sources */,
@@ -458,8 +462,8 @@
 				FA1003FF21D6B5800083B303 /* MonsterSelectionViewController.swift in Sources */,
 				FA13AE9721DD220200E5F002 /* BattleUnit.swift in Sources */,
 				1F5A29FB21AC75FA0039CC87 /* ClassProperties.swift in Sources */,
+				FA7A374221E3DBFD00632FC6 /* DiceSet.swift in Sources */,
 				1F5A29FD21AC7D290039CC87 /* Hunter.swift in Sources */,
-				FA64368E21D801970058B53E /* TODO.swift in Sources */,
 				1F0CF63721A48E480022DEEB /* Hero.swift in Sources */,
 				1F5A29F421AC70540039CC87 /* StatsTable.swift in Sources */,
 				1F5A29FF21AC7D5D0039CC87 /* Mage.swift in Sources */,

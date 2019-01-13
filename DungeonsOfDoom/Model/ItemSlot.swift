@@ -8,9 +8,9 @@
 
 class ItemSlot {
     
-    private var item: Item?
+    private var item: Item!
     
     func isEmpty() -> Bool { return item == nil }
-    func getItem() -> Item { return self.item! }
+    func getItem() -> Item { return self.item }
     func setItem(item: Item) { self.item = item }
 }

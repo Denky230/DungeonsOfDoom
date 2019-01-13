@@ -20,7 +20,7 @@ class ClassProperties {
                 .cloth
             ]
         static let baseItems: [Item] = [
-            Item(name: "item_01", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.ATK : 5]), armorPiece: .head, armorType: .plate),
+                Item(name: "item_01", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.ATK : 5]), armorPiece: .head, armorType: .plate),
                 Item(name: "item_02", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.ATK : 10]), armorPiece: .chest, armorType: .plate),
                 Item(name: "item_03", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.DEF : 5]), armorPiece: .gloves, armorType: .plate),
                 Item(name: "item_04", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.DEF : 5]), armorPiece: .pants, armorType: .plate),
@@ -44,11 +44,11 @@ class ClassProperties {
                 .cloth
             ]
         static let baseItems: [Item] = [
-                Item(name: "item_01", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.ATK : 1]), armorPiece: .head, armorType: .mail),
-                Item(name: "item_02", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.ATK : 1]), armorPiece: .chest, armorType: .mail),
-                Item(name: "item_03", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.DEF : 1]), armorPiece: .gloves, armorType: .mail),
-                Item(name: "item_04", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.DEF : 1]), armorPiece: .pants, armorType: .mail),
-                Item(name: "item_05", sprite: UIImage(), price: 10, statsTable: StatsTable(stats: [.LCK : 1]), armorPiece: .boots, armorType: .mail),
+                Item(name: "item_01", sprite: UIImage(named: "helmet1")!, price: 10, statsTable: StatsTable(stats: [.ATK : 1]), armorPiece: .head, armorType: .mail),
+                Item(name: "item_02", sprite: UIImage(named: "armour")!, price: 10, statsTable: StatsTable(stats: [.ATK : 1]), armorPiece: .chest, armorType: .mail),
+                Item(name: "item_03", sprite: UIImage(named: "arrow")!, price: 10, statsTable: StatsTable(stats: [.DEF : 1]), armorPiece: .gloves, armorType: .mail),
+                Item(name: "item_04", sprite: UIImage(named: "cap")!, price: 10, statsTable: StatsTable(stats: [.DEF : 1]), armorPiece: .pants, armorType: .mail),
+                Item(name: "item_05", sprite: UIImage(named: "boots")!, price: 10, statsTable: StatsTable(stats: [.LCK : 1]), armorPiece: .boots, armorType: .mail),
             ]
         static let baseStats: StatsTable =
             StatsTable(stats: [

@@ -10,7 +10,7 @@ import UIKit
 
 class Equipment {
     
-    private var itemSlots: [ArmorPiece : ItemSlot]
+    var itemSlots: [ArmorPiece : ItemSlot]
     private let wearableArmorTypes: [ArmorType]
     
     init(wearableArmorTypes: [ArmorType]) {
@@ -25,6 +25,19 @@ class Equipment {
             .ring : ItemSlot(),
             .weapon : ItemSlot(),
         ]
+    }
+    
+    func sortSlots() {
+        let itemSlotsS = itemSlots.sorted(by: { $0.key.rawValue < $1.key.rawValue })
+    }
+    
+    func getItemSlots() -> [ItemSlot] {
+        var slots: [ItemSlot] = [ItemSlot]()
+        for slot in itemSlots.values {
+            slots.append(slot)
+        }
+        
+        return slots
     }
     
     func getItems() -> [Item] {

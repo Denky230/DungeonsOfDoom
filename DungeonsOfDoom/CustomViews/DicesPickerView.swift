@@ -25,15 +25,12 @@ class DicesPickerView: UIPickerView {
         func numberOfComponents(in pickerView: UIPickerView) -> Int {
             return components
         }
-        
         func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
             return dices.count
         }
-        
         func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
             return frame.height * 0.4
         }
-        
         func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
             // Each row's view
             let componentWidth = frame.width / CGFloat(components)
@@ -53,7 +50,7 @@ class DicesPickerView: UIPickerView {
             view.addSubview(imageView)
             
             return view
-        }
+        }        
     }
     
     let controller: DicesPickerViewController
@@ -68,5 +65,19 @@ class DicesPickerView: UIPickerView {
     required init?(coder aDecoder: NSCoder) {
         self.controller = DicesPickerViewController(frame: CGRect(), dices: [], components: 0)
         super.init(coder: aDecoder)
+    }
+    
+    func rollDices() -> Int {
+        var total: Int = 0
+        // Animate each component to random row
+        for c in 0 ..< numberOfComponents {
+            let number: Int = Int.random(in: 0 ..< controller.dices.count)
+            selectRow(number, inComponent: c, animated: true)
+            
+            // Add row's value
+            total += controller.dices[number].getValue()
+        }
+        
+        return total
     }
 }
